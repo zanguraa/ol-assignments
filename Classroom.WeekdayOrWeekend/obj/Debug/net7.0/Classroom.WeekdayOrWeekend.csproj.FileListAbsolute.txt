@@ -1,0 +1,14 @@
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\bin\Debug\net7.0\Classroom.WeekdayOrWeekend.exe
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\bin\Debug\net7.0\Classroom.WeekdayOrWeekend.deps.json
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\bin\Debug\net7.0\Classroom.WeekdayOrWeekend.runtimeconfig.json
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\bin\Debug\net7.0\Classroom.WeekdayOrWeekend.dll
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\bin\Debug\net7.0\Classroom.WeekdayOrWeekend.pdb
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.AssemblyInfoInputs.cache
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.AssemblyInfo.cs
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.csproj.CoreCompileInputs.cache
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.dll
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\refint\Classroom.WeekdayOrWeekend.dll
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.pdb
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\Classroom.WeekdayOrWeekend.genruntimeconfig.cache
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.WeekdayOrWeekend\obj\Debug\net7.0\ref\Classroom.WeekdayOrWeekend.dll

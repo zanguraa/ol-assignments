@@ -1,0 +1,14 @@
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\bin\Debug\net7.0\Assignments.ConsoleCalculator.exe
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\bin\Debug\net7.0\Assignments.ConsoleCalculator.deps.json
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\bin\Debug\net7.0\Assignments.ConsoleCalculator.runtimeconfig.json
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\bin\Debug\net7.0\Assignments.ConsoleCalculator.dll
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\bin\Debug\net7.0\Assignments.ConsoleCalculator.pdb
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.AssemblyInfoInputs.cache
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.AssemblyInfo.cs
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.dll
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\refint\Assignments.ConsoleCalculator.dll
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.pdb
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.genruntimeconfig.cache
+C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\ref\Assignments.ConsoleCalculator.dll

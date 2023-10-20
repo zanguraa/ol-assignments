@@ -1,0 +1,14 @@
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\bin\Debug\net7.0\Classroom.AgeBracketDetermination.exe
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\bin\Debug\net7.0\Classroom.AgeBracketDetermination.deps.json
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\bin\Debug\net7.0\Classroom.AgeBracketDetermination.runtimeconfig.json
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\bin\Debug\net7.0\Classroom.AgeBracketDetermination.dll
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\bin\Debug\net7.0\Classroom.AgeBracketDetermination.pdb
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.AssemblyInfoInputs.cache
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.AssemblyInfo.cs
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.csproj.CoreCompileInputs.cache
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.dll
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\refint\Classroom.AgeBracketDetermination.dll
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.pdb
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\Classroom.AgeBracketDetermination.genruntimeconfig.cache
+C:\Users\Zangura\source\repos\ol-assignments\Classroom.AgeBracketDetermination\obj\Debug\net7.0\ref\Classroom.AgeBracketDetermination.dll

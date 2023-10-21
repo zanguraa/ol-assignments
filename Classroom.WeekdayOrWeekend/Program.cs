@@ -15,6 +15,8 @@
 
 
             Weekday(day);
+
+            Console.WriteLine("This months is in ");
             MonthQuarter(month);
 
         }
@@ -28,10 +30,10 @@
                     Console.WriteLine("It is weekend");
                     break;
                 case "monday":
-                case "muesday":
-                case "mednesday":
-                case "mhursday":
-                case "mriday":
+                case "tuesday":
+                case "wednesday":
+                case "thursday":
+                case "friday":
                     Console.WriteLine("It is weekday");
                     break;
                 default:

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.WeekdayOrWeekend"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.VowelOrNot", "Assignments.VowelOrNot\Assignments.VowelOrNot.csproj", "{F5509ED0-730C-41F6-AF19-B0B34B264ECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.NthFibonacci", "Assignments.NthFibonacci\Assignments.NthFibonacci.csproj", "{D6F2701E-96AA-47DE-9042-BF15D741DA3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F5509ED0-730C-41F6-AF19-B0B34B264ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5509ED0-730C-41F6-AF19-B0B34B264ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5509ED0-730C-41F6-AF19-B0B34B264ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F2701E-96AA-47DE-9042-BF15D741DA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F2701E-96AA-47DE-9042-BF15D741DA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F2701E-96AA-47DE-9042-BF15D741DA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F2701E-96AA-47DE-9042-BF15D741DA3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.NumberToBinary"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clasroom.NumberPrinter", "Clasroom.NumberPrinter\Clasroom.NumberPrinter.csproj", "{3878FEC6-6B2C-4F59-9971-7EF5C778DE38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clasroom.EvenNumberFinder", "EvenNumberFinder\Clasroom.EvenNumberFinder.csproj", "{FB351DC6-182B-442F-8190-3FC253C53A13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clasroom.EvenNumberFinder", "Classroom.EvenNumberFinder\Clasroom.EvenNumberFinder.csproj", "{FB351DC6-182B-442F-8190-3FC253C53A13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clasroom.MultiplicationTableGenerator", "Clasroom.MultiplicationTableGenerator\Clasroom.MultiplicationTableGenerator.csproj", "{9BD55098-527B-43EC-9422-73F7162C965E}"
 EndProject

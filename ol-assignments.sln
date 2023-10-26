@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clasroom.EvenNumberFinder",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clasroom.MultiplicationTableGenerator", "Clasroom.MultiplicationTableGenerator\Clasroom.MultiplicationTableGenerator.csproj", "{9BD55098-527B-43EC-9422-73F7162C965E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.TempConverter", "Classroom.TempConverter\Classroom.TempConverter.csproj", "{6540D481-B420-4BAB-89DC-B0EEF9F2D3A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TempConverter", "Classroom.TempConverter\Classroom.TempConverter.csproj", "{6540D481-B420-4BAB-89DC-B0EEF9F2D3A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.TicTacToe", "Assignments.TicTacToe\Assignments.TicTacToe.csproj", "{569CA69F-C74C-4BA0-B727-14B0C5DA6A18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{6540D481-B420-4BAB-89DC-B0EEF9F2D3A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6540D481-B420-4BAB-89DC-B0EEF9F2D3A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6540D481-B420-4BAB-89DC-B0EEF9F2D3A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569CA69F-C74C-4BA0-B727-14B0C5DA6A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569CA69F-C74C-4BA0-B727-14B0C5DA6A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569CA69F-C74C-4BA0-B727-14B0C5DA6A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569CA69F-C74C-4BA0-B727-14B0C5DA6A18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

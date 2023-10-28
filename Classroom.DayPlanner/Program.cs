@@ -28,15 +28,23 @@ namespace Classroom.DayPlanner
             };
         static void Main(string[] args)
         {
-            Console.WriteLine("Please, Enter day of the week: ");
-            var dayOfTheWeek = Enum.TryParse(Console.ReadLine(), out WeekDays day);
-
-            var activities = ActivityDictionary[day];
-
-            foreach (var activity in activities)
+            try
             {
-                Console.WriteLine(activity);
+                Console.WriteLine("Please, Enter day of the week: ");
+                var dayOfTheWeek = Enum.TryParse(Console.ReadLine(), out WeekDays day);
+
+                var activities = ActivityDictionary[day];
+
+                foreach (var activity in activities)
+                {
+                    Console.WriteLine(activity);
+                }
             }
+            catch 
+            {
+                Console.WriteLine("error! Please enter numbers from 0 to 6, or weekdays!");
+            }
+           
 
         }
 

@@ -35,6 +35,7 @@ namespace Classroom.DayPlanner
 
                 var activities = ActivityDictionary[day];
 
+
                 foreach (var activity in activities)
                 {
                     Console.WriteLine($"Suggested Activity: {activity}");

@@ -1,36 +1,43 @@
-﻿namespace Classroom.WeatherAdviser
+﻿using System;
+using System.Collections.Generic;
+
+namespace Classroom.WeatherAdviser
 {
     internal class Program
     {
-
-       public enum WeatherConditions
+        public enum WeatherConditions
         {
-            Sunny,
-            Rainy,
-            Cloudy,
-            Windy,
-            Snowy
+            sunny,
+            rainy,
+            cloudy,
+            windy,
+            snowy
         }
-        
+
+        public static Dictionary<WeatherConditions, string[]> ConditionsDictionary = new()
+        {
+            {WeatherConditions.sunny, new[] { "Wear a t-shirt and sunglasses", "Go for a hike"} },
+            {WeatherConditions.rainy, new[] { "Wear an umbrella", "Walk and listen to your fav musics" } },
+            {WeatherConditions.windy, new[] { "Tights or wind pants and long socks will protect your legs", "Avoid going to Didi Dighomi!" } },
+            {WeatherConditions.snowy, new[] { "Wear a heavy coat and boots", "Build a snowman" } },
+            {WeatherConditions.cloudy, new[] { "Free Dresscode, Wear what you want", "Perfect day for a photo session" } }
+        };
+
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter Weather condition here: ");
-            var userWeather = Console.ReadLine();
-            var parsedWeather = Enum.TryParse(userWeather, out WeatherConditions condition);
+            var userWeather = Console.ReadLine().ToLower();
 
+            if (Enum.TryParse(userWeather, out WeatherConditions condition))
+            {
+                var conditionSentences = ConditionsDictionary[condition];
+                Console.WriteLine("Suggested clothes: " + conditionSentences[0]);
+                Console.WriteLine("Suggested activity: " + conditionSentences[1]);
+            }
+            else
+            {
+                Console.WriteLine("Invalid weather condition entered.");
+            }
         }
-
-        public Dictionary<WeatherConditions, string> Conditions = new()
-        {
-            {WeatherConditions.Sunny, "Wear a t-shirt and sunglasses" },
-            {WeatherConditions.Rainy, "Take Umbrella and go for a walk" },
-            {WeatherConditions.Windy, "Stay at home, Avoid going to Didi Dighomi" },
-            {WeatherConditions.Snowy, "Go to Bakuriani, or Gudauri" },
-            {WeatherConditions.Cloudy, "Take Camera ond go to Photosession" }
-
-
-        };
-
-
     }
 }

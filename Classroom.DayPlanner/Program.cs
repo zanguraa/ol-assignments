@@ -7,47 +7,41 @@ namespace Classroom.DayPlanner
 
         public enum WeekDays
         {
-            Monday = 0,
-            Tuesday = 1,
-            Wednesday = 2,
-            Thursday = 3,
-            Friday = 4,
-            Saturday = 5,
-            Sunday = 6,
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday,
         }
+
+        private static Dictionary<WeekDays, string[]> ActivityDictionary = new()
+            {
+            {WeekDays.Monday, new[] {"Working Hard", "Sleep "} },
+            {WeekDays.Tuesday, new[] {"Working", "Meeting"} },
+            {WeekDays.Wednesday, new[] {"Working Hard", "GYM", "Healthy Food"}},
+            {WeekDays.Thursday, new[] {"Meeting", "Contract sign"} },
+            {WeekDays.Friday, new[] {"Drink", "Club"} },
+            {WeekDays.Saturday, new[] {"Football", "Rest"} },
+            {WeekDays.Sunday, new[] {"Hiking", "Rest"} }
+            };
         static void Main(string[] args)
         {
             Console.WriteLine("Please, Enter day of the week: ");
             var dayOfTheWeek = Enum.TryParse(Console.ReadLine(), out WeekDays day);
 
-            switch(day)
+            var activities = ActivityDictionary[day];
+
+            foreach (var activity in activities)
             {
-               case WeekDays.Monday:
-                    Console.WriteLine("Working");
-                    break;
-               case WeekDays.Tuesday:
-                    Console.WriteLine("Go to Cinema");
-                    break;
-               case WeekDays.Wednesday:
-                    Console.WriteLine("Working hard");
-                    break;
-               case WeekDays.Thursday:
-                    Console.WriteLine("Go to Luka's Birthday");
-                    break;
-            case WeekDays.Friday:
-                    Console.WriteLine("Drink");
-                    break;
-                    case WeekDays.Saturday:
-                case WeekDays.Sunday:
-                    Console.WriteLine("Rest");
-                    break;
-                 default:
-                    Console.WriteLine("Invalid day of the week");
-                    break;
+                Console.WriteLine(activity);
             }
 
         }
 
-    
+       
+
+
     }
 }

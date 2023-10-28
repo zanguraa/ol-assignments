@@ -31,8 +31,8 @@ namespace Classroom.WeatherAdviser
             if (Enum.TryParse(userWeather, out WeatherConditions condition))
             {
                 var conditionSentences = ConditionsDictionary[condition];
-                Console.WriteLine("Suggested clothes: " + conditionSentences[0]);
-                Console.WriteLine("Suggested activity: " + conditionSentences[1]);
+                Console.WriteLine("Outfit Suggestion: " + conditionSentences[0]);
+                Console.WriteLine("Activity Suggestion: " + conditionSentences[1]);
             }
             else
             {

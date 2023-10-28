@@ -37,7 +37,7 @@ namespace Classroom.DayPlanner
 
                 foreach (var activity in activities)
                 {
-                    Console.WriteLine(activity);
+                    Console.WriteLine($"Suggested Activity: {activity}");
                 }
             }
             catch 

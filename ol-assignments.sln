@@ -27,11 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TempConverter", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.TicTacToe", "Assignments.TicTacToe\Assignments.TicTacToe.csproj", "{569CA69F-C74C-4BA0-B727-14B0C5DA6A18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.DiscountCalculator", "Classroom.DiscountCalculator\Classroom.DiscountCalculator.csproj", "{C668077B-4BE0-45D8-BA5A-3D2EFAE3B011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.DiscountCalculator", "Classroom.DiscountCalculator\Classroom.DiscountCalculator.csproj", "{C668077B-4BE0-45D8-BA5A-3D2EFAE3B011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.DayPlanner", "Classroom.DayPlanner\Classroom.DayPlanner.csproj", "{A0B1B16D-B4B5-4972-BE13-AA7C56C8389D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.DayPlanner", "Classroom.DayPlanner\Classroom.DayPlanner.csproj", "{A0B1B16D-B4B5-4972-BE13-AA7C56C8389D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.WeatherAdviser", "Classroom.WeatherAdviser\Classroom.WeatherAdviser.csproj", "{027B8634-CFAF-4D68-8B28-B659E9B2F507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.WeatherAdviser", "Classroom.WeatherAdviser\Classroom.WeatherAdviser.csproj", "{027B8634-CFAF-4D68-8B28-B659E9B2F507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.MoveElementToEnd", "Assignments.MoveElementToEnd\Assignments.MoveElementToEnd.csproj", "{B05DE573-6D8E-4F4E-A647-DAFA591747DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{027B8634-CFAF-4D68-8B28-B659E9B2F507}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027B8634-CFAF-4D68-8B28-B659E9B2F507}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027B8634-CFAF-4D68-8B28-B659E9B2F507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B05DE573-6D8E-4F4E-A647-DAFA591747DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05DE573-6D8E-4F4E-A647-DAFA591747DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05DE573-6D8E-4F4E-A647-DAFA591747DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05DE573-6D8E-4F4E-A647-DAFA591747DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

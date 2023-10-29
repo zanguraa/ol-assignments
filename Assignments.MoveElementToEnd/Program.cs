@@ -18,9 +18,7 @@ namespace Assignments.MoveElementToEnd
         static void MoveElementToEnd(int toMove, List<int> array)
         {
 
-            // Implement logic to move element to the end of the list
             int indexElement = array.RemoveAll(x => x == toMove);
-            // Find the index of the element
            for (int i = 0; i < indexElement; i++)
             {
                 array.Add(toMove);

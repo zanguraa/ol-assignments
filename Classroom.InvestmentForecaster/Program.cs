@@ -30,7 +30,7 @@
             var futureValue = principalAmount * Math.Pow(1 + rate /n, (n * timeInYears));
 
 
-            Console.WriteLine($"Future value of your investment: ${futureValue}");
+            Console.WriteLine($"Future value of your investment: ${futureValue.ToString("0.00")}");
         }
 
     }

@@ -130,7 +130,23 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine("Please enter number: ");
                 var userInput = Console.ReadLine();
                 double squareNumber = Math.Sqrt(double.Parse(userInput));
-                Console.WriteLine($"result is {squareNumber.ToString("0.00")}");
+                Console.WriteLine($"square {squareNumber.ToString("0.00")}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+        }
+        public static void SquareRoot ()
+        {
+            try
+            {
+                Console.WriteLine("Your choice is SquareRoot!");
+                Console.WriteLine("Please enter number: ");
+                var userInput = Console.ReadLine();
+                double squareNumber = double.Parse(userInput);
+                var result = squareNumber * squareNumber;
+                Console.WriteLine($"The squareRoot of {userInput}  is {result}");
             }
             catch (Exception ex)
             {
@@ -157,7 +173,8 @@ namespace Classroom.AdvancedCalculator
                         break;
                     case "Square":
                         Square(); break;
-
+                    case "SquareRoot":
+                        SquareRoot(); break;
                     default:
                         Console.WriteLine("Invalid operation.");
                         break;

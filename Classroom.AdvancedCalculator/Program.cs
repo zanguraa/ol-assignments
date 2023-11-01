@@ -153,7 +153,25 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message.ToString());
             }
         }
-
+        public static void Power ()
+        {
+            try 
+            {
+                Console.WriteLine("Your choice is Power!");
+                Console.WriteLine("Please enter base: ");
+                var userInput = Console.ReadLine ();
+                double baseParsed = double.Parse(userInput);
+                Console.WriteLine("Please enter exponent: ");
+                var userExponent = Console.ReadLine();
+                double exponentParsed = double.Parse(userExponent);
+                var power = Math.Pow(baseParsed, exponentParsed);
+                Console.WriteLine($"The power of numbers {baseParsed} and {exponentParsed} is {power}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+        }
         private static void MathOperate(string operation)
         {
 
@@ -169,12 +187,13 @@ namespace Classroom.AdvancedCalculator
                     case "Multiply":
                         Multiplication(); break;
                     case "Divide":
-                        Division();
-                        break;
+                        Division(); break;
                     case "Square":
                         Square(); break;
                     case "SquareRoot":
                         SquareRoot(); break;
+                    case "Power":
+                        Power(); break;
                     default:
                         Console.WriteLine("Invalid operation.");
                         break;

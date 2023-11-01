@@ -1,10 +1,12 @@
 ﻿using Spectre.Console;
 using System.ComponentModel;
+using System.Numerics;
 
 namespace Classroom.AdvancedCalculator
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
             Console.WriteLine();
@@ -25,26 +27,101 @@ namespace Classroom.AdvancedCalculator
 
         }
 
-        public static void Add()
+        public static void Addition()
         {
-            double result;
-            Console.WriteLine("Please enter first number: ");
-            var firstNum = double.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter second number: ");
-            var secondNum = double.Parse(Console.ReadLine());
-            result = firstNum + secondNum;
-            Console.WriteLine($" the result {firstNum} + {secondNum} is: {result} ");
-        }
+             
+            try
+            {
+                double result;
+                Console.WriteLine("You choice is Addition!");
+                Console.WriteLine("Please enter first number: ");
+                var firstInput = Console.ReadLine();
+                double firstN = double.Parse(firstInput);
 
-        public static void Subtract()
+                Console.WriteLine("Please enter second number: ");
+                var secondInput = Console.ReadLine();
+                double secondN = double.Parse(secondInput);
+                result = firstN + secondN;
+                Console.WriteLine($" the result {firstN} + {secondN} is: {result} ");
+            }
+            catch(Exception ex)  
+            {
+                Console.WriteLine(ex.Message);
+            }
+           
+        }
+        public static void Subtraction()
         {
-            double result;
-            Console.WriteLine("Please enter first number: ");
-            var firstNum = double.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter second number: ");
-            var secondNum = double.Parse(Console.ReadLine());
-            result = firstNum - secondNum;
-            Console.WriteLine($" the result {firstNum} - {secondNum} is: {result} ");
+            try
+            {
+                double result;
+                Console.WriteLine("You choice is Subtract!");
+
+                Console.WriteLine("Please enter first number: ");
+                var firstInput = Console.ReadLine();
+                double firstN = double.Parse(firstInput);
+
+                Console.WriteLine("Please enter second number: ");
+                var secondInput = Console.ReadLine();
+                double secondN = double.Parse(secondInput);
+                result = firstN - secondN;
+                Console.WriteLine($" the result {firstN} - {secondN} is: {result} ");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        public static void  Multiplication()
+        {
+            try
+            {
+                double result;
+                Console.WriteLine("Your choice is Multiply!");
+                Console.WriteLine("Please enter first number: ");
+                var firstInput = Console.ReadLine();
+                double firstN = double.Parse(firstInput);
+
+                Console.WriteLine("Please enter second number: ");
+                var secondInput = Console.ReadLine();
+                double secondN = double.Parse(secondInput);
+                result = firstN * secondN;
+                Console.WriteLine($" the result {firstN} * {secondN} is: {result} ");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        
+        public static void Division ()
+        {
+            try
+            {
+                double result;
+                Console.WriteLine("Your choice is Multiply!");
+                Console.WriteLine("Please enter first number: ");
+                var firstInput = Console.ReadLine();
+                double firstN = double.Parse(firstInput);
+
+                Console.WriteLine("Please enter second number: ");
+                var secondInput = Console.ReadLine();
+                double secondN = double.Parse(secondInput);
+                if(secondN == 0)
+                {
+                    Console.WriteLine("can not divide by zero!");
+                }
+                else
+                {
+                    result = firstN / secondN;
+                    Console.WriteLine($" the result {firstN} / {secondN} is: {result.ToString("0.00")} ");
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private static void MathOperate(string operation)
@@ -56,12 +133,14 @@ namespace Classroom.AdvancedCalculator
 
 
                     case "Add":
-                        Add();
-                        break;
+                        Addition(); break;
                     case "Subtract":
-                       Subtract();
+                        Subtraction(); break;
+                    case "Multiply":
+                        Multiplication(); break;
+                    case "Divide":
+                        Division();
                         break;
-                    // Add other cases for different operations as needed
 
 
                     default:

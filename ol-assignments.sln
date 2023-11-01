@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.WeatherAdviser", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.MoveElementToEnd", "Assignments.MoveElementToEnd\Assignments.MoveElementToEnd.csproj", "{B05DE573-6D8E-4F4E-A647-DAFA591747DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.InvestmentForecaster", "Classroom.InvestmentForecaster\Classroom.InvestmentForecaster.csproj", "{B07DA8C2-212B-4A9B-BB24-297C20AFC71D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.InvestmentForecaster", "Classroom.InvestmentForecaster\Classroom.InvestmentForecaster.csproj", "{B07DA8C2-212B-4A9B-BB24-297C20AFC71D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.GradeAnalyzer", "Classroom.GradeAnalyzer\Classroom.GradeAnalyzer.csproj", "{D345972D-FA04-4642-9731-E40DF3715258}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.GradeAnalyzer", "Classroom.GradeAnalyzer\Classroom.GradeAnalyzer.csproj", "{D345972D-FA04-4642-9731-E40DF3715258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.AdvancedCalculator", "Classroom.AdvancedCalculator\Classroom.AdvancedCalculator.csproj", "{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{D345972D-FA04-4642-9731-E40DF3715258}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D345972D-FA04-4642-9731-E40DF3715258}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D345972D-FA04-4642-9731-E40DF3715258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

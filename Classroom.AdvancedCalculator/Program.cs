@@ -93,13 +93,12 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message);
             }
         }
-        
         public static void Division ()
         {
             try
             {
                 double result;
-                Console.WriteLine("Your choice is Multiply!");
+                Console.WriteLine("Your choice is Divide!");
                 Console.WriteLine("Please enter first number: ");
                 var firstInput = Console.ReadLine();
                 double firstN = double.Parse(firstInput);
@@ -123,6 +122,21 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message);
             }
         }
+        public static void Square ()
+        {
+            try
+            {
+                Console.WriteLine("Your choice is Square!");
+                Console.WriteLine("Please enter number: ");
+                var userInput = Console.ReadLine();
+                double squareNumber = Math.Sqrt(double.Parse(userInput));
+                Console.WriteLine($"result is {squareNumber.ToString("0.00")}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
+        }
 
         private static void MathOperate(string operation)
         {
@@ -141,7 +155,8 @@ namespace Classroom.AdvancedCalculator
                     case "Divide":
                         Division();
                         break;
-
+                    case "Square":
+                        Square(); break;
 
                     default:
                         Console.WriteLine("Invalid operation.");

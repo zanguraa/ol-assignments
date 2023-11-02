@@ -2,7 +2,16 @@
 {
     internal class Program
     {
+        static int gradeAverage;
+        
         static void Main(string[] args)
+        {
+
+            AverageGradeCalculator();
+            LetterGradeCalculator();
+        }
+
+        public static void AverageGradeCalculator()
         {
             Console.WriteLine("Enter your grades separated by commas: ");
             var userGrades = Console.ReadLine();
@@ -11,17 +20,24 @@
 
             var gradeSum = 0;
 
-            foreach ( var gradeString in gradesArray )
+            foreach (var gradeString in gradesArray)
             {
-                var parsedGrade = int.TryParse(gradeString, out var grade );
-
+                var parsedGrade = int.TryParse(gradeString, out var grade);
                 gradeSum += grade;
             }
-           
-            var gradeAvvarage = gradeSum / gradesArray.Length;
-
-            Console.WriteLine(gradeAvvarage.ToString());
-           
+             gradeAverage = gradeSum / gradesArray.Length;
+            Console.WriteLine($"Average Grade: {gradeAverage.ToString()}");
+        }
+        public static void LetterGradeCalculator() 
+        {
+        switch (gradeAverage / 10)
+            {
+                case 10: case 9: Console.WriteLine("Letter grade: A"); break;
+                case 8: Console.WriteLine("Letter grade: B"); break;
+                case 7: Console.WriteLine("Letter grade: C"); break;
+                case 6: Console.WriteLine("Letter grade: D"); break;
+                default: Console.WriteLine("Letter grade: F"); break;
+            }
         }
     }
 }

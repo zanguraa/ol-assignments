@@ -17,9 +17,11 @@
             var sum = CalculateSum(arrayNumbers);
             var average = CalculateAverage(arrayNumbers);
             var min = FindMin(arrayNumbers);
-            Console.WriteLine($"sum is: {sum}");
-            Console.WriteLine($"average is: {average}");
+            var max = FindMax(arrayNumbers);
+            Console.WriteLine($"Sum is: {sum}");
+            Console.WriteLine($"Average is: {average}");
             Console.WriteLine($"The min is: {min}");
+            Console.WriteLine($"The Max is: {max}");
         }
 
         static int CalculateSum(int[] arrayNumbers)
@@ -34,7 +36,7 @@
         static double CalculateAverage(int[] arrayNumbers)
         {
             var sum = 0;
-            var average = 0;
+            double average = 0.00;
             for (int j = 0; j < arrayNumbers.Length; j++)
             {
                 sum += arrayNumbers[j];
@@ -42,7 +44,7 @@
 
             for (int i = 0; i < arrayNumbers.Length; i++)
             {
-                average = sum / arrayNumbers.Length;
+                average = sum / (double)arrayNumbers.Length;
             }
             return average;
         }
@@ -58,6 +60,19 @@
             }
             return min;
 
+        }
+
+        static int FindMax(int[] arrayNumbers)
+        {
+            var max = 0;
+            foreach (int i in arrayNumbers)
+            {
+                if (i > max)
+                {
+                    max = i;
+                }
+            }
+            return max;
         }
         
     }

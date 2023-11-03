@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.InvestmentForecas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.GradeAnalyzer", "Classroom.GradeAnalyzer\Classroom.GradeAnalyzer.csproj", "{D345972D-FA04-4642-9731-E40DF3715258}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.AdvancedCalculator", "Classroom.AdvancedCalculator\Classroom.AdvancedCalculator.csproj", "{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.AdvancedCalculator", "Classroom.AdvancedCalculator\Classroom.AdvancedCalculator.csproj", "{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.ArrayOperations", "Classroom.ArrayOperations\Classroom.ArrayOperations.csproj", "{C8538669-66FE-4EC5-8168-7D6BD140CFC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7667AC04-195D-4B7D-A8D0-ECC003F4AE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8538669-66FE-4EC5-8168-7D6BD140CFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8538669-66FE-4EC5-8168-7D6BD140CFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8538669-66FE-4EC5-8168-7D6BD140CFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8538669-66FE-4EC5-8168-7D6BD140CFC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

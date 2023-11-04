@@ -10,7 +10,7 @@ namespace Classroom.AdvancedCalculator
         static void Main(string[] args)
         {
             Console.WriteLine();
-            // Ask for the user's favorite fruit
+            
             var operation = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("Hello, Choose the [red]Math operation![/]")
@@ -22,9 +22,7 @@ namespace Classroom.AdvancedCalculator
             "Power"
                     }));
 
-            // Echo the fruit back to the terminal
             MathOperate(operation);
-
         }
 
         public static void Addition()
@@ -174,12 +172,9 @@ namespace Classroom.AdvancedCalculator
         }
         private static void MathOperate(string operation)
         {
-
             {
                 switch (operation)
                 {
-
-
                     case "Add":
                         Addition(); break;
                     case "Subtract":
@@ -199,11 +194,6 @@ namespace Classroom.AdvancedCalculator
                         break;
                 }
             }
-
         }
-
-
-    }
-
-       
+    }     
 }

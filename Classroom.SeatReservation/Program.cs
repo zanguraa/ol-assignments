@@ -1,5 +1,6 @@
 ﻿using Spectre.Console;
 using System.ComponentModel;
+using System.Linq;
 using System.Numerics;
 
 namespace Classroom.SeatReservation
@@ -7,13 +8,11 @@ namespace Classroom.SeatReservation
     internal class Program
     {
         static int[,] seatArray = new int[5, 3];
-        
         static void Main(string[] args)
         {
             while (true)
             {
                 Console.WriteLine();
-                DisplaySeats(seatArray);
                 var operation = AnsiConsole.Prompt(
                      new SelectionPrompt<string>()
                          .Title("Select an option:\r\n")
@@ -23,10 +22,18 @@ namespace Classroom.SeatReservation
             "1) Reserve a seat", "2) View available seats"
                          }));
                 Console.WriteLine($"Your choice: {operation}");
-                ReserveSeats(seatArray);
-               
-            }
-           
+                
+                if(operation == "1) Reserve a seat")
+                {
+                    ReserveSeats(seatArray);
+                    DisplaySeats(seatArray);
+                }
+                else
+                {
+                    var avialableSeats = AvailableSeats(seatArray);
+                    Console.WriteLine($"Avialable seats: {avialableSeats}");
+                }
+            }          
         }
         static void DisplaySeats(int[,] seatArray )
         {
@@ -37,9 +44,6 @@ namespace Classroom.SeatReservation
             {
                 Console.WriteLine("Updated Seating Chart: ");
             }
-           
-           
-
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -52,29 +56,38 @@ namespace Classroom.SeatReservation
         }
         static void ReserveSeats(int[,] seatArray)
         {
-            Console.WriteLine("Enter the row number: ");
-            var num1 = int.TryParse(Console.ReadLine(), out int ParsedNum1);
-            if (ParsedNum1 >= 0 && ParsedNum1 < seatArray.GetLength(0))
+            try
             {
-                Console.WriteLine("Enter the Column number: ");
-                var num2 = int.TryParse(Console.ReadLine(), out int ParsedNum2);
-                if (ParsedNum2 >= 0 && ParsedNum2 < seatArray.GetLength(1))
+                Console.WriteLine("Enter the row number: ");
+                var num1Input = Console.ReadLine();
+                if (!int.TryParse(num1Input, out int ParsedNum1) || ParsedNum1 < 0 || ParsedNum1 >= seatArray.GetLength(0))
                 {
-                    if (seatArray[ParsedNum1, ParsedNum2] == 0)
-                    {
-                        seatArray[ParsedNum1, ParsedNum2] = 1;
-                        Console.WriteLine("Seat reserved.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Seat is already reserved, try different position");
-                    }
+                    Console.WriteLine("Invalid input for the row number.");
+                    return;
                 }
 
-            }
+                Console.WriteLine("Enter the Column number: ");
+                var num2Input = Console.ReadLine();
+                if (!int.TryParse(num2Input, out int ParsedNum2) || ParsedNum2 < 0 || ParsedNum2 >= seatArray.GetLength(1))
+                {
+                    Console.WriteLine("Invalid input for the column number.");
+                    return;
+                }
 
-          
-           
+                if (seatArray[ParsedNum1, ParsedNum2] == 0)
+                {
+                    seatArray[ParsedNum1, ParsedNum2] = 1;
+                    Console.WriteLine("Seat reserved.");
+                }
+                else
+                {
+                    Console.WriteLine("Seat is already reserved, try a different position.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
         static bool CheckIfAllZeros(int[,] seatArray)
         {
@@ -90,6 +103,20 @@ namespace Classroom.SeatReservation
             }
             return true; 
         }
-
+        static int AvailableSeats(int[,] seatArray)
+        {
+            int num = 0;
+            for (int i = 0;i < seatArray.GetLength(0);i++)
+            {
+                for(int j = 0;j < seatArray.GetLength(1);j++)
+                {
+                    if (seatArray[i, j] == 0)
+                    {
+                        num++;
+                    }
+                }
+            }
+            return num;
+        }
     }
 }

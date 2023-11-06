@@ -89,19 +89,20 @@ namespace Classroom.SeatReservation
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
         static bool CheckIfAllZeros(int[,] seatArray)
         {
             for (int i = 0; i < seatArray.GetLength(0); i++)
             {
                 for (int j = 0; j < seatArray.GetLength(1); j++)
-                {
+                { 
                     if (seatArray[i, j] != 0)
                     {
-                        return false; 
+                        return false;
                     }
                 }
             }
-            return true; 
+            return true;
         }
         static int AvailableSeats(int[,] seatArray)
         {

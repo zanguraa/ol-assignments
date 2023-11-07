@@ -17,6 +17,8 @@ namespace Classroom.TextAnalyzer
                                     .Split(' ', StringSplitOptions.RemoveEmptyEntries);
             CountWords(words);
             FindMostCommonWord(words);
+            FindLongestWord(words);
+            FIndShortestWord(words);
         }
         static void CountWords(string[] words)
         {
@@ -44,8 +46,20 @@ namespace Classroom.TextAnalyzer
         }
         static void FindLongestWord(string[] words)
         {
-
-
+            var longestWord = words.OrderByDescending(word => word.Length).FirstOrDefault();
+            Console.WriteLine($"Longest word: {longestWord}");
+        }
+        static void FIndShortestWord(string[] words)
+        {
+            var shortestWord = words[0];
+            foreach (var word in words)
+            {
+                if(word.Length < shortestWord.Length)
+                {
+                    shortestWord = word;
+                }
+            }
+            Console.WriteLine($"Shortest word: {shortestWord}");
         }
     }
 }

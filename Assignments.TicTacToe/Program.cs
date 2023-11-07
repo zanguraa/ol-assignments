@@ -2,12 +2,18 @@
 {
     internal class Program
     {
-        static char[,] board = new char[3, 3];
+        private static char currentPlayer = 'X';
         static void Main(string[] args)
         {
+             char[,] board = new char[3, 3];
+
             Console.WriteLine("Welcome to Tic Tac Toe!");
-            DisplayBoard(board);
             ChoosePlayerSymbols();
+            DisplayBoard(board);
+            PlayerMove(board);
+            DisplayBoard(board);
+            SwitchPlayer();
+            PlayerMove(board);
         }
 
         static void DisplayBoard(char[,] board)
@@ -36,10 +42,43 @@
                 }
                 Console.WriteLine("\nInvalid choice. Please choose 'X' or 'O': ");
             }
-
             char player2Symbol = player1Symbol == 'X' ? 'O' : 'X';
             Console.WriteLine($"\nPlayer 1 is '{player1Symbol}' and Player 2 is '{player2Symbol}'. Let's start the game!\n");
         }
+        static void PlayerMove(char[,] board)
+        {
+            try
+            {
+                Console.Write("Enter Player1 position (x,y or x y): ");
+                var playerInput = Console.ReadLine();
+                var inputArray = playerInput.Split(' ');
 
+                if (inputArray.Length != 2 || !int.TryParse(inputArray[0], out var parsedX) || !int.TryParse(inputArray[1], out var parsedY)
+                    || parsedX < 0 || parsedX >= board.GetLength(0) || parsedY < 0 || parsedY >= board.GetLength(1))
+                {
+                    Console.WriteLine("Please enter a valid position within the board range.");
+                    return;
+                }
+
+                if (board[parsedX, parsedY] == '-') // Check if the position is empty
+                {
+                    board[parsedX, parsedY] = 'X'; // Update with 'X' if the position is empty
+                }
+                else
+                {
+                    Console.WriteLine("The position is already occupied. Please choose an empty position.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        static void SwitchPlayer()
+        {
+            currentPlayer = currentPlayer == 'X' ? 'O' : 'X';
+            Console.WriteLine($"Switching to Player {currentPlayer}'s turn.");
+        }
     }
 }

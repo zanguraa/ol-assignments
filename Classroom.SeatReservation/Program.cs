@@ -7,7 +7,15 @@ namespace Classroom.SeatReservation
 {
     internal class Program
     {
-        static int[,] seatArray = new int[5, 3];
+        static char[,] seatArray = new char [,]
+        {
+            {'0', '0', '0' },
+            {'0', '0' , '0'},
+            {'0', '0' , '0'},
+            {'0', '0' , '0'},
+            {'0', '0' , '0'},
+        };
+
         static void Main(string[] args)
         {
             while (true)
@@ -35,7 +43,7 @@ namespace Classroom.SeatReservation
                 }
             }          
         }
-        static void DisplaySeats(int[,] seatArray )
+        static void DisplaySeats(char[,] seatArray )
         {
             if(CheckIfAllZeros(seatArray))
             {
@@ -48,13 +56,13 @@ namespace Classroom.SeatReservation
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Console.Write(" " + seatArray[i, j] + " ");
+                    Console.Write(" " + seatArray[i, j] + ' ');
                 }
                 Console.WriteLine();
             }
             Console.WriteLine();
         }
-        static void ReserveSeats(int[,] seatArray)
+        static void ReserveSeats(char[,] seatArray)
         {
             try
             {
@@ -74,9 +82,9 @@ namespace Classroom.SeatReservation
                     return;
                 }
 
-                if (seatArray[ParsedNum1, ParsedNum2] == 0)
+                if (seatArray[ParsedNum1, ParsedNum2] == '0')
                 {
-                    seatArray[ParsedNum1, ParsedNum2] = 1;
+                    seatArray[ParsedNum1, ParsedNum2] = 'X';
                     Console.WriteLine("Seat reserved.");
                 }
                 else
@@ -90,13 +98,13 @@ namespace Classroom.SeatReservation
             }
         }
 
-        static bool CheckIfAllZeros(int[,] seatArray)
+        static bool CheckIfAllZeros(char[,] seatArray)
         {
             for (int i = 0; i < seatArray.GetLength(0); i++)
             {
                 for (int j = 0; j < seatArray.GetLength(1); j++)
                 { 
-                    if (seatArray[i, j] != 0)
+                    if (seatArray[i, j] != '0')
                     {
                         return false;
                     }
@@ -104,14 +112,14 @@ namespace Classroom.SeatReservation
             }
             return true;
         }
-        static int AvailableSeats(int[,] seatArray)
+        static int AvailableSeats(char[,] seatArray)
         {
             int num = 0;
             for (int i = 0;i < seatArray.GetLength(0);i++)
             {
                 for(int j = 0;j < seatArray.GetLength(1);j++)
                 {
-                    if (seatArray[i, j] == 0)
+                    if (seatArray[i, j] == '0')
                     {
                         num++;
                     }

@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.HTMLTagRemover", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.PersonClass", "Classroom.PersonClass\Classroom.PersonClass.csproj", "{2DE67929-A290-4BAE-AA51-252684913319}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.SimpleBankAccount", "Classroom.SimpleBankAccount\Classroom.SimpleBankAccount.csproj", "{45A8C21F-3A41-499D-8494-B96AE8CED0C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{2DE67929-A290-4BAE-AA51-252684913319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE67929-A290-4BAE-AA51-252684913319}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DE67929-A290-4BAE-AA51-252684913319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -45,9 +45,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.ArrayOperations",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.SeatReservation", "Classroom.SeatReservation\Classroom.SeatReservation.csproj", "{EE5C5132-6CBA-4305-8216-4AFB6D4F7C19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.PalindromeChecker", "Classroom.PalindromeChecker\Classroom.PalindromeChecker.csproj", "{004330FD-3598-4C57-994A-ED8D4E1A039E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.PalindromeChecker", "Classroom.PalindromeChecker\Classroom.PalindromeChecker.csproj", "{004330FD-3598-4C57-994A-ED8D4E1A039E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.TextAnalyzer", "Classroom.TextAnalyzer\Classroom.TextAnalyzer.csproj", "{D5810233-697B-44D5-AFDD-7EF6C4DC7467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TextAnalyzer", "Classroom.TextAnalyzer\Classroom.TextAnalyzer.csproj", "{D5810233-697B-44D5-AFDD-7EF6C4DC7467}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.HTMLTagRemover", "Classroom.HTMLTagRemover\Classroom.HTMLTagRemover.csproj", "{6DBB1362-E8B8-47A1-8636-F21C1358E596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.PersonClass", "Classroom.PersonClass\Classroom.PersonClass.csproj", "{2DE67929-A290-4BAE-AA51-252684913319}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +151,14 @@ Global
 		{D5810233-697B-44D5-AFDD-7EF6C4DC7467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5810233-697B-44D5-AFDD-7EF6C4DC7467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5810233-697B-44D5-AFDD-7EF6C4DC7467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DBB1362-E8B8-47A1-8636-F21C1358E596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DBB1362-E8B8-47A1-8636-F21C1358E596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DBB1362-E8B8-47A1-8636-F21C1358E596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DBB1362-E8B8-47A1-8636-F21C1358E596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE67929-A290-4BAE-AA51-252684913319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE67929-A290-4BAE-AA51-252684913319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE67929-A290-4BAE-AA51-252684913319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE67929-A290-4BAE-AA51-252684913319}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

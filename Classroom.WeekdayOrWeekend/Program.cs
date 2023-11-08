@@ -4,23 +4,14 @@
     {
         static void Main(string[] args)
         {
-
             var weekdays = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
             var month = DateTime.Now.Month;
-
-
-
             Console.WriteLine("Hello, please enter one of the day of weekend: ");
             var day = Console.ReadLine();
-
-
             Weekday(day);
-
             Console.WriteLine("This months is in ");
             MonthQuarter(month);
-
         }
-
         static void Weekday(string day)
         {
             switch (day.ToLower())
@@ -41,7 +32,6 @@
                     break;
             }
         }
-
         static void MonthQuarter(int month)
         {
             switch (month)
@@ -69,9 +59,7 @@
                 default:
                     Console.WriteLine("Please enter a valid month");
                     break;
-
             }
         }
-
     }
 }

@@ -4,14 +4,11 @@
     {
         static void Main(string[] args)
         {
-
             while (true)
             {
 
                 try
                 {
-
-
                     Console.WriteLine("Enter first number: ");
                     string firstNumber = Console.ReadLine();
                     double parsedNumber = ParseToDouble(firstNumber);
@@ -21,16 +18,12 @@
                     Console.WriteLine("Enter Match operation: + - * \\:");
                     string operation = Console.ReadLine();
                     Calculate(parsedNumber, parsedSecond, operation);
-
-
                 }
                 catch
                 {
                     Console.WriteLine("Text is not a number");
                 }
-
             }
-
         }
 
         static double ParseToDouble(string input)
@@ -43,7 +36,6 @@
             }
             return result;
         }
-
         static void Calculate(double first, double second, string op)
         {
             double result = 0;
@@ -52,7 +44,6 @@
             {
                 result = first - second;
                 Console.WriteLine($" {first} - {second} = {result} ");
-
             }
             if (op == "+")
             {
@@ -73,11 +64,6 @@
             {
                 Console.WriteLine("Can not divide by zero");
             }
-
         }
-
-
     }
-
-
 }

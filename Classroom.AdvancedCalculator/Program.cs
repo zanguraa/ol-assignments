@@ -6,11 +6,10 @@ namespace Classroom.AdvancedCalculator
 {
     internal class Program
     {
-        
         static void Main(string[] args)
         {
             Console.WriteLine();
-            
+
             var operation = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
                     .Title("Hello, Choose the [red]Math operation![/]")
@@ -24,10 +23,9 @@ namespace Classroom.AdvancedCalculator
 
             MathOperate(operation);
         }
-
         public static void Addition()
         {
-             
+
             try
             {
                 double result;
@@ -42,11 +40,11 @@ namespace Classroom.AdvancedCalculator
                 result = firstN + secondN;
                 Console.WriteLine($" the result {firstN} + {secondN} is: {result} ");
             }
-            catch(Exception ex)  
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-           
+
         }
         public static void Subtraction()
         {
@@ -70,7 +68,7 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message);
             }
         }
-        public static void  Multiplication()
+        public static void Multiplication()
         {
             try
             {
@@ -91,7 +89,7 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message);
             }
         }
-        public static void Division ()
+        public static void Division()
         {
             try
             {
@@ -104,7 +102,7 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine("Please enter second number: ");
                 var secondInput = Console.ReadLine();
                 double secondN = double.Parse(secondInput);
-                if(secondN == 0)
+                if (secondN == 0)
                 {
                     Console.WriteLine("can not divide by zero!");
                 }
@@ -113,14 +111,14 @@ namespace Classroom.AdvancedCalculator
                     result = firstN / secondN;
                     Console.WriteLine($" the result {firstN} / {secondN} is: {result.ToString("0.00")} ");
                 }
-               
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
-        public static void Square ()
+        public static void Square()
         {
             try
             {
@@ -135,7 +133,7 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message.ToString());
             }
         }
-        public static void SquareRoot ()
+        public static void SquareRoot()
         {
             try
             {
@@ -151,13 +149,13 @@ namespace Classroom.AdvancedCalculator
                 Console.WriteLine(ex.Message.ToString());
             }
         }
-        public static void Power ()
+        public static void Power()
         {
-            try 
+            try
             {
                 Console.WriteLine("Your choice is Power!");
                 Console.WriteLine("Please enter base: ");
-                var userInput = Console.ReadLine ();
+                var userInput = Console.ReadLine();
                 double baseParsed = double.Parse(userInput);
                 Console.WriteLine("Please enter exponent: ");
                 var userExponent = Console.ReadLine();
@@ -195,5 +193,5 @@ namespace Classroom.AdvancedCalculator
                 }
             }
         }
-    }     
+    }
 }

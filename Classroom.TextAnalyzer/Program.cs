@@ -3,14 +3,11 @@ using System.Text.RegularExpressions;
 
 namespace Classroom.TextAnalyzer
 {
-    
-
     internal class Program
     {
         private static Dictionary<string, int> wordsDictionary = new();
         static void Main(string[] args)
         {
-          
             while (true)
             {
                 var pattern = @"[.,:#*^&<>\\]";
@@ -35,7 +32,7 @@ namespace Classroom.TextAnalyzer
                 {
                     break;
                 }
-            } 
+            }
         }
         static void CountWords(string[] words)
         {
@@ -49,10 +46,10 @@ namespace Classroom.TextAnalyzer
         }
         static void FindMostCommonWord(string[] words)
         {
-            if(words.Length == 0) return;
+            if (words.Length == 0) return;
             foreach (var word in words)
             {
-                if(!wordsDictionary.ContainsKey(word))
+                if (!wordsDictionary.ContainsKey(word))
                 {
                     wordsDictionary.Add(word, 1);
                 }
@@ -75,7 +72,7 @@ namespace Classroom.TextAnalyzer
             if (words.Length == 0) return;
             foreach (var word in words)
             {
-                if(word.Length < shortestWord.Length)
+                if (word.Length < shortestWord.Length)
                 {
                     shortestWord = word;
                 }
@@ -96,7 +93,7 @@ namespace Classroom.TextAnalyzer
         }
         static void SentenceCountWords(string[] words)
         {
-           
+
         }
     }
 }

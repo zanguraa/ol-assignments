@@ -7,7 +7,7 @@ namespace Classroom.SeatReservation
 {
     internal class Program
     {
-        static char[,] seatArray = new char [,]
+        static char[,] seatArray = new char[,]
         {
             {'0', '0', '0' },
             {'0', '0' , '0'},
@@ -30,8 +30,8 @@ namespace Classroom.SeatReservation
             "1) Reserve a seat", "2) View available seats"
                          }));
                 Console.WriteLine($"Your choice: {operation}");
-                
-                if(operation == "1) Reserve a seat")
+
+                if (operation == "1) Reserve a seat")
                 {
                     ReserveSeats(seatArray);
                     DisplaySeats(seatArray);
@@ -41,14 +41,15 @@ namespace Classroom.SeatReservation
                     var avialableSeats = AvailableSeats(seatArray);
                     Console.WriteLine($"Avialable seats: {avialableSeats}");
                 }
-            }          
+            }
         }
-        static void DisplaySeats(char[,] seatArray )
+        static void DisplaySeats(char[,] seatArray)
         {
-            if(CheckIfAllZeros(seatArray))
+            if (CheckIfAllZeros(seatArray))
             {
                 Console.WriteLine("Initial Seating Chart: ");
-            } else
+            }
+            else
             {
                 Console.WriteLine("Updated Seating Chart: ");
             }
@@ -73,7 +74,6 @@ namespace Classroom.SeatReservation
                     Console.WriteLine("Invalid input for the row number.");
                     return;
                 }
-
                 Console.WriteLine("Enter the Column number: ");
                 var num2Input = Console.ReadLine();
                 if (!int.TryParse(num2Input, out int ParsedNum2) || ParsedNum2 < 0 || ParsedNum2 >= seatArray.GetLength(1))
@@ -97,13 +97,12 @@ namespace Classroom.SeatReservation
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
-
         static bool CheckIfAllZeros(char[,] seatArray)
         {
             for (int i = 0; i < seatArray.GetLength(0); i++)
             {
                 for (int j = 0; j < seatArray.GetLength(1); j++)
-                { 
+                {
                     if (seatArray[i, j] != '0')
                     {
                         return false;
@@ -115,9 +114,9 @@ namespace Classroom.SeatReservation
         static int AvailableSeats(char[,] seatArray)
         {
             int num = 0;
-            for (int i = 0;i < seatArray.GetLength(0);i++)
+            for (int i = 0; i < seatArray.GetLength(0); i++)
             {
-                for(int j = 0;j < seatArray.GetLength(1);j++)
+                for (int j = 0; j < seatArray.GetLength(1); j++)
                 {
                     if (seatArray[i, j] == '0')
                     {

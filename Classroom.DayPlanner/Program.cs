@@ -4,7 +4,6 @@ namespace Classroom.DayPlanner
 {
     internal class Program
     {
-
         public enum WeekDays
         {
             Monday,
@@ -34,23 +33,15 @@ namespace Classroom.DayPlanner
                 var dayOfTheWeek = Enum.TryParse(Console.ReadLine(), out WeekDays day);
 
                 var activities = ActivityDictionary[day];
-
-
                 foreach (var activity in activities)
                 {
                     Console.WriteLine($"Suggested Activity: {activity}");
                 }
             }
-            catch 
+            catch
             {
                 Console.WriteLine("error! Please enter numbers from 0 to 6, or weekdays!");
             }
-           
-
         }
-
-       
-
-
     }
 }

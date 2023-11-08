@@ -1,6 +1,4 @@
-﻿
-
-namespace Assignments.VowelOrNot
+﻿namespace Assignments.VowelOrNot
 {
     internal class Program
     {
@@ -8,21 +6,15 @@ namespace Assignments.VowelOrNot
         {
             char letter;
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-
             Console.WriteLine("Please Enter letter: ");
             var userResponse = Console.ReadLine();
             if (char.TryParse(userResponse, out letter))
             {
                 Console.WriteLine(CheckVowelOrNot(letter));
-            }
-
-            
+            }  
         }
-
         static bool CheckVowelOrNot(char letter)
         {
-
             int[] vowelChars = { 'a', 'e', 'i', 'o', 'u', 'ა', 'ე', 'ი', 'ო', 'უ' };
            if (vowelChars.Contains(letter))
             {
@@ -31,7 +23,6 @@ namespace Assignments.VowelOrNot
             {
                 return false;
             }
-           
         }
     }
 }

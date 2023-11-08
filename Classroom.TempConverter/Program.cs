@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             while (true)
             {
                 try
@@ -33,17 +32,11 @@
                 {
                     Console.WriteLine("Please enter only integers! let's start from the begining");
                     Console.WriteLine(" - - - - - - - - - - - ");
-
                 }
-
             }
-
-           
-
-           
         }
 
-        static double ConvertTemperatureToFarenheit(double  temperature)
+        static double ConvertTemperatureToFarenheit(double temperature)
         {
             double farenheit;
             if (temperature < 0)
@@ -52,11 +45,10 @@
             }
             else
             {
-                farenheit = (temperature * 9) / 5 + 32; 
+                farenheit = (temperature * 9) / 5 + 32;
             }
             return farenheit;
         }
-
         static double ConvertFarenheitToCelsius(double temperature)
         {
             double celsius;

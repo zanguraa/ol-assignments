@@ -7,7 +7,7 @@
             var array = new int[] { 0, 1, 5, 76, 234, 678 };
             var target = 76;
             Console.WriteLine("");
-           int result = BinarySearch(array, target);
+            int result = BinarySearch(array, target);
             if (result != -1)
             {
                 Console.WriteLine($"Element {target} found at index {result}.");
@@ -15,13 +15,11 @@
             else
             {
                 Console.WriteLine($"{target} not found in the array!");
-
             }
         }
-
-       public static int BinarySearch(int[] array, int target)
+        public static int BinarySearch(int[] array, int target)
         {
-           int left = 0;
+            int left = 0;
             int right = array.Length - 1;
             while (left <= right)
             {

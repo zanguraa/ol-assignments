@@ -8,10 +8,8 @@
             var age = int.Parse(Console.ReadLine());
             DiscountCalculator(age);
         }
-
         static void DiscountCalculator(int age)
         {
-          
             int price = 100;
             if (age > 0)
             {
@@ -22,9 +20,6 @@
             {
                 Console.WriteLine("Invalid input please enter valid age");
             }
-          
-           
-           
         }
     }
 }

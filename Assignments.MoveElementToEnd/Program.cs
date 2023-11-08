@@ -14,16 +14,13 @@ namespace Assignments.MoveElementToEnd
                 Console.WriteLine(element);
             }
         }
-
         static void MoveElementToEnd(int toMove, List<int> array)
         {
-
             int indexElement = array.RemoveAll(x => x == toMove);
-           for (int i = 0; i < indexElement; i++)
+            for (int i = 0; i < indexElement; i++)
             {
                 array.Add(toMove);
             }
-            
         }
     }
 }

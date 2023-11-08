@@ -5,8 +5,7 @@
         private static char currentPlayer = 'X';
         static void Main(string[] args)
         {
-             char[,] board = new char[3, 3];
-
+            char[,] board = new char[3, 3];
             Console.WriteLine("Welcome to Tic Tac Toe!");
             ChoosePlayerSymbols();
             DisplayBoard(board);
@@ -15,7 +14,6 @@
             SwitchPlayer();
             PlayerMove(board);
         }
-
         static void DisplayBoard(char[,] board)
         {
             for (int i = 0; i < board.GetLength(0); i++)
@@ -25,7 +23,6 @@
                     Console.Write(" " + board[i, j] + "-");
                 }
                 Console.WriteLine();
-
             }
         }
         static void ChoosePlayerSymbols()
@@ -59,16 +56,14 @@
                     Console.WriteLine("Please enter a valid position within the board range.");
                     return;
                 }
-
-                if (board[parsedX, parsedY] == '-') // Check if the position is empty
+                if (board[parsedX, parsedY] == '-')
                 {
-                    board[parsedX, parsedY] = 'X'; // Update with 'X' if the position is empty
+                    board[parsedX, parsedY] = 'X';
                 }
                 else
                 {
                     Console.WriteLine("The position is already occupied. Please choose an empty position.");
                 }
-
             }
             catch (Exception ex)
             {

@@ -7,10 +7,9 @@
             long binary;
             Console.WriteLine("Hello, Please enter your number and output will be in binary!");
             var tryToBinary = Console.ReadLine();
-           var parsedBinary = long.TryParse(tryToBinary, out binary);
+            var parsedBinary = long.TryParse(tryToBinary, out binary);
             Console.WriteLine(ToBinary(binary));
         }
-
         static string ToBinary(long value)
         {
             if (value == 0) return "0";

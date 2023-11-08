@@ -4,25 +4,20 @@
     {
         static void Main(string[] args)
         {
-
-            while(true)
+            while (true)
             {
-
                 try
                 {
                     Console.WriteLine("Please enter your age:");
                     var age = int.Parse(Console.ReadLine());
                     Console.WriteLine($"You are in the {AgeBracket(age)} age bracket.");
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     Console.WriteLine($"Error: please enter integers");
                 }
             }
-           
-           
         }
-
         static string AgeBracket(int age)
         {
             if (age < 0)

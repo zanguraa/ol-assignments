@@ -19,9 +19,7 @@
                     Console.WriteLine("Error, please enter valid number!");
                 }
             }
-
         }
-
         static void MultiplicationTableGenerator(double a, double b)
         {
            for (int i = 1; i <= a; i++)
@@ -33,8 +31,6 @@
                 }
                 Console.WriteLine("\n");
                 }
-           
-
         }
     }
 }

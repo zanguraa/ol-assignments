@@ -7,8 +7,7 @@
             int num = 12;
             Console.WriteLine(CalculateFibonacci(num));
         }
-
-        static int CalculateFibonacci (int fibonacci)
+        static int CalculateFibonacci(int fibonacci)
         {
             if (fibonacci == 0)
             {
@@ -22,7 +21,7 @@
             {
                 int first = 0; int second = 1; int third = 0;
 
-                for(int i = 2; i < fibonacci; i++)
+                for (int i = 2; i < fibonacci; i++)
                 {
                     third = first + second; first = second; second = third;
                 }

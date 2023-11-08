@@ -2,15 +2,12 @@
 {
     internal class Program
     {
-        static int gradeAverage;
-        
+        static int gradeAverage;      
         static void Main(string[] args)
         {
-
             AverageGradeCalculator();
             LetterGradeCalculator();
         }
-
         public static void AverageGradeCalculator()
         {
             Console.WriteLine("Enter your grades separated by commas: ");

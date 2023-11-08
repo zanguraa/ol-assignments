@@ -23,7 +23,6 @@
             Console.WriteLine($"The min is: {min}");
             Console.WriteLine($"The Max is: {max}");
         }
-
         static int CalculateSum(int[] arrayNumbers)
         {
             var sum = 0;
@@ -74,6 +73,6 @@
             }
             return max;
         }
-        
+
     }
 }

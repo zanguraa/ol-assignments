@@ -4,7 +4,6 @@ namespace Classroom.PalindromeChecker
 {
     internal class Program
     {
-
         static string regex = "\\W";
         static void Main(string[] args)
         {
@@ -13,7 +12,6 @@ namespace Classroom.PalindromeChecker
             var regExInput = Regex.Replace(userInput, regex, "").ToLower();
             IsPalindromeChecker(regExInput);
         }
-
         static void IsPalindromeChecker(string input)
         {
             string first = input.Substring(0, input.Length / 2);
@@ -25,17 +23,14 @@ namespace Classroom.PalindromeChecker
             string temp = new string(charArray);
             var second = temp.Substring(0, temp.Length / 2);
 
-           if(first.Equals(second))
+            if (first.Equals(second))
             {
                 Console.WriteLine("Is Palindrome");
             }
-           else
+            else
             {
                 Console.WriteLine("Is not a Palindrome");
             }
-           
-
-           
         }
     }
 }

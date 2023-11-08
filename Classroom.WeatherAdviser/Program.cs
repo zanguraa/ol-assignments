@@ -13,7 +13,6 @@ namespace Classroom.WeatherAdviser
             windy,
             snowy
         }
-
         public static Dictionary<WeatherConditions, string[]> ConditionsDictionary = new()
         {
             {WeatherConditions.sunny, new[] { "Wear a t-shirt and sunglasses", "Go for a hike"} },
@@ -22,7 +21,6 @@ namespace Classroom.WeatherAdviser
             {WeatherConditions.snowy, new[] { "Wear a heavy coat and boots", "Build a snowman" } },
             {WeatherConditions.cloudy, new[] { "Free Dresscode, Wear what you want", "Perfect day for a photo session" } }
         };
-
         static void Main(string[] args)
         {
             Console.WriteLine("Please enter Weather condition here: ");

@@ -16,7 +16,6 @@ namespace Classroom.SimpleBankAccount
             {
                 throw new ArgumentException("Can not be less then zero");
             }
-
             this.Balance = balance;
         }
         public void Deposit(decimal amount)

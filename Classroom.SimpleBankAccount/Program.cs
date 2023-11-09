@@ -12,8 +12,6 @@
             Console.WriteLine();
             Console.WriteLine();
             account.Withdraw(2900);
-
         }
-
     }
 }

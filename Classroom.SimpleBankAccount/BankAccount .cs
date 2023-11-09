@@ -27,8 +27,13 @@ namespace Classroom.SimpleBankAccount
             { throw new ArgumentException("Can not be less then zero"); }
             Balance += amount;
             Console.WriteLine($"Depositing: {amount}");
+            Console.WriteLine($"New balance is: ${Balance}");
         }
-
+        public void Withdraw(decimal amount)
+        {
+            Balance -= amount;
+            Console.WriteLine();
+        }
 
     }
 }

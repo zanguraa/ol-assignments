@@ -51,9 +51,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TextAnalyzer", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.HTMLTagRemover", "Classroom.HTMLTagRemover\Classroom.HTMLTagRemover.csproj", "{6DBB1362-E8B8-47A1-8636-F21C1358E596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.PersonClass", "Classroom.PersonClass\Classroom.PersonClass.csproj", "{2DE67929-A290-4BAE-AA51-252684913319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.PersonClass", "Classroom.PersonClass\Classroom.PersonClass.csproj", "{2DE67929-A290-4BAE-AA51-252684913319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.SimpleBankAccount", "Classroom.SimpleBankAccount\Classroom.SimpleBankAccount.csproj", "{45A8C21F-3A41-499D-8494-B96AE8CED0C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.SimpleBankAccount", "Classroom.SimpleBankAccount\Classroom.SimpleBankAccount.csproj", "{45A8C21F-3A41-499D-8494-B96AE8CED0C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.Encapsulation", "Classroom.Encapsulation\Classroom.Encapsulation.csproj", "{3C4E23F8-09A7-498A-A317-EA8A5D9005A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +167,10 @@ Global
 		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A8C21F-3A41-499D-8494-B96AE8CED0C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4E23F8-09A7-498A-A317-EA8A5D9005A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4E23F8-09A7-498A-A317-EA8A5D9005A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4E23F8-09A7-498A-A317-EA8A5D9005A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4E23F8-09A7-498A-A317-EA8A5D9005A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

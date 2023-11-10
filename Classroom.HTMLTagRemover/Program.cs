@@ -6,15 +6,16 @@ namespace Classroom.HTMLTagRemover
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Please enter html tag with text: ");
+            Console.WriteLine("Please enter an HTML string to clean:\r\n ");
             var response = Console.ReadLine();
-            
-          var doc = new HtmlDocument();
-            doc.LoadHtml(response);
 
-         HtmlNode node = doc.DocumentNode.SelectSingleNode("//h1");
-
-            Console.WriteLine(node.ToString());
+            Console.WriteLine("Processing...");
+            RemoveHtmlTags(response);
+        }
+        static void RemoveHtmlTags(string htmlTags)
+        {
+            Console.WriteLine("Original HTML String: ");
+            Console.WriteLine(htmlTags);
         }
     }
 }

@@ -30,7 +30,7 @@
             {
                 for (int j = 0; j < board.GetLength(1); j++)
                 {
-                    Console.Write(" " + board[i, j] + "-");
+                    Console.Write(" " + board[i, j] + " ");
                 }
                 Console.WriteLine();
             }

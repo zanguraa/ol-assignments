@@ -3,9 +3,19 @@
     internal class Program
     {
         private static char currentPlayer = 'X';
+        static char[,] board = new char[,]
+           {
+               {'-', '-' , '-' },
+               {'-', '-' , '-' },
+               {'-', '-' , '-' },
+               {'-', '-' , '-' },
+           };
+
         static void Main(string[] args)
         {
-            char[,] board = new char[3, 3];
+
+
+
             Console.WriteLine("Welcome to Tic Tac Toe!");
             ChoosePlayerSymbols();
             DisplayBoard(board);

@@ -44,7 +44,6 @@
             Console.WriteLine("It's a draw!");
             return true;
         }
-
         static void DisplayBoard(char[,] board)
         {
             for (int i = 0; i < board.GetLength(0); i++)

@@ -94,7 +94,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("The position is already occupied. Please choose an empty position.");
+                    Console.WriteLine($"Can not set position. [{parsedX}, {parsedY}] is not empty");
                 }
             }
             catch (Exception ex)

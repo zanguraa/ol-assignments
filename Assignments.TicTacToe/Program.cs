@@ -8,22 +8,43 @@
                {'-', '-' , '-' },
                {'-', '-' , '-' },
                {'-', '-' , '-' },
-               {'-', '-' , '-' },
            };
 
         static void Main(string[] args)
         {
-
-
-
             Console.WriteLine("Welcome to Tic Tac Toe!");
             ChoosePlayerSymbols();
             DisplayBoard(board);
-            PlayerMove(board);
-            DisplayBoard(board);
-            SwitchPlayer();
-            PlayerMove(board);
+
+            while (!IsGameOver(board))
+            {
+                PlayerMove(board);
+                DisplayBoard(board);
+                SwitchPlayer();
+            }
         }
+
+        static bool IsGameOver(char[,] board)
+        {
+            if (CheckForWinner(board))
+            {
+                Console.WriteLine("Game Over!");
+                return true;
+            }
+            for (int i = 0; i < board.GetLength(0); i++)
+            {
+                for (int j = 0; j < board.GetLength(1); j++)
+                {
+                    if (board[i, j] == '-')
+                    {
+                        return false; // Found an empty space, game is not over
+                    }
+                }
+            }
+            Console.WriteLine("It's a draw!");
+            return true;
+        }
+
         static void DisplayBoard(char[,] board)
         {
             for (int i = 0; i < board.GetLength(0); i++)
@@ -56,7 +77,7 @@
         {
             try
             {
-                Console.Write("Enter Player1 position (x,y or x y): ");
+                Console.Write($"Enter Player {currentPlayer} position (x, y or x y): ");
                 var playerInput = Console.ReadLine();
                 var inputArray = playerInput.Split(' ');
 
@@ -66,9 +87,10 @@
                     Console.WriteLine("Please enter a valid position within the board range.");
                     return;
                 }
+
                 if (board[parsedX, parsedY] == '-')
                 {
-                    board[parsedX, parsedY] = 'X';
+                    board[parsedX, parsedY] = currentPlayer;
                 }
                 else
                 {
@@ -79,6 +101,42 @@
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+        static bool CheckForWinner(char[,] board)
+        {
+            // Check rows
+            for (int i = 0; i < board.GetLength(0); i++)
+            {
+                if (board[i, 0] != '-' && board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
+                {
+                    Console.WriteLine($"Player {board[i, 0]} wins!");
+                    return true;
+                }
+            }
+
+            // Check columns
+            for (int j = 0; j < board.GetLength(1); j++)
+            {
+                if (board[0, j] != '-' && board[0, j] == board[1, j] && board[1, j] == board[2, j])
+                {
+                    Console.WriteLine($"Player {board[0, j]} wins!");
+                    return true;
+                }
+            }
+
+            // Check diagonals
+            if (board[0, 0] != '-' && board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2])
+            {
+                Console.WriteLine($"Player {board[0, 0]} wins!");
+                return true;
+            }
+
+            if (board[0, 2] != '-' && board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
+            {
+                Console.WriteLine($"Player {board[0, 2]} wins!");
+                return true;
+            }
+            return false;
         }
         static void SwitchPlayer()
         {

@@ -9,7 +9,6 @@
                {'-', '-' , '-' },
                {'-', '-' , '-' },
            };
-
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Tic Tac Toe!");
@@ -23,7 +22,6 @@
                 SwitchPlayer();
             }
         }
-
         static bool IsGameOver(char[,] board)
         {
             if (CheckForWinner(board))
@@ -58,7 +56,6 @@
         static void ChoosePlayerSymbols()
         {
             Console.WriteLine("Player 1, choose 'X' or 'O': ");
-
             char player1Symbol;
             while (true)
             {
@@ -78,7 +75,7 @@
             {
                 Console.Write($"Enter Player {currentPlayer} position (x, y or x y): ");
                 var playerInput = Console.ReadLine();
-                var inputArray = playerInput.Split(' ');
+                var inputArray = playerInput.Split(new char[] { ',',' '}, StringSplitOptions.RemoveEmptyEntries);
 
                 if (inputArray.Length != 2 || !int.TryParse(inputArray[0], out var parsedX) || !int.TryParse(inputArray[1], out var parsedY)
                     || parsedX < 0 || parsedX >= board.GetLength(0) || parsedY < 0 || parsedY >= board.GetLength(1))

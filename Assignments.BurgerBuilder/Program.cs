@@ -11,16 +11,28 @@ namespace Assignments.BurgerBuilder
         static Burger branded = new Burger("BrandedBurger", new List<string> { "bun", "lettuce", "pickles", "chicken", "branded sauce" });
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose the order mode: ");
-            Console.WriteLine("1) Premade Burger");
-            Console.WriteLine("2) Burger Builder");
-            var userChoiceSuccess = int.TryParse(Console.ReadLine(), out var choice);
-            if (!userChoiceSuccess)
+            bool isValidChoice = false;
+
+            while (!isValidChoice)
             {
-                Console.WriteLine("Invalid input. Please enter a number.");
-                return;
+                try
+                {
+                    Console.WriteLine("Choose the order mode: ");
+                    Console.WriteLine("1) Premade Burger");
+                    Console.WriteLine("2) Burger Builder");
+                    if (!int.TryParse(Console.ReadLine(), out var choice) || choice > 2 || choice < 1)
+                    {
+                        throw new ArgumentException("Invalid input. Please enter a number between 1 and 2.");
+                    }
+                    ShowUserVariant(choice);
+                    isValidChoice = true;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    isValidChoice = false;
+                }
             }
-            ShowUserVariant(choice);
         }
         static void DisplayBurger(List<string> ingredients)
         {
@@ -95,7 +107,6 @@ namespace Assignments.BurgerBuilder
             {
                 ingredients.AddRange(new List<string> { "bun", "lettuce", "pickles", "chicken", "branded sauce" });
             }
-            DisplayBurger(ingredients);
             return ingredients;
         }
     }

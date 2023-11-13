@@ -11,7 +11,6 @@ namespace Assignments.BurgerBuilder
         static Burger branded = new Burger("BrandedBurger", new List<string> { "bun", "lettuce", "pickles", "chicken", "branded sauce" });
         static void Main(string[] args)
         {
-
             Console.WriteLine("Choose the order mode: ");
             Console.WriteLine("1) Premade Burger");
             Console.WriteLine("2) Burger Builder");
@@ -23,13 +22,13 @@ namespace Assignments.BurgerBuilder
             }
             ShowUserVariant(choice);
         }
-
-        static void DisplayBurger(Burger burger)
+        static void DisplayBurger(List<string> ingredients)
         {
-            Console.WriteLine($"You ordered a {burger.Name} with the following ingredients: {string.Join(", ", burger.Description)}");
+            Console.WriteLine($"You ordered a burger with the following ingredients: {string.Join(", ", ingredients)}");
         }
         static void ShowUserVariant(int variant)
         {
+            List<string> userIngredients = new List<string>();
             if (variant == 1)
             {
                 Console.WriteLine("Your variant is Premade burger, please choose wich one do you want:");
@@ -37,51 +36,67 @@ namespace Assignments.BurgerBuilder
                 Console.WriteLine("2. Hamburger");
                 Console.WriteLine("3. BrandedBurger");
                 var userBurger = int.TryParse(Console.ReadLine(), out var burgerChoice);
-                BurgerMenu(burgerChoice);
+                userIngredients.AddRange(BurgerMenu(burgerChoice));
             }
             else if (variant == 2)
             {
                 Console.WriteLine("Burger builder: ");
                 Console.WriteLine("Have melted cheese?");
-                Console.WriteLine("yes");
-                Console.WriteLine("no");
-                var meltedCheese = Console.ReadLine();
+                Console.WriteLine("1. yes");
+                Console.WriteLine("2. no");
+                var meltedCheese = int.TryParse(Console.ReadLine(), out var parsedCheese);
+                if (parsedCheese == 1)
+                    userIngredients.Add("melted cheese");
+
                 Console.WriteLine("Have sour cucumber?");
-                Console.WriteLine("yes");
-                Console.WriteLine("no");
-                var cucumber = Console.ReadLine();
+                Console.WriteLine("1. yes");
+                Console.WriteLine("2. no");
+                var cucumber = int.TryParse(Console.ReadLine(), out var parsedCucumber);
+                if (parsedCucumber == 1)
+                    userIngredients.Add("sour cucumber");
+
                 Console.WriteLine("Choose the meat: ");
                 Console.WriteLine("1. chicken");
                 Console.WriteLine("2. beef");
                 Console.WriteLine("3. none");
                 var meat = int.TryParse(Console.ReadLine(), out var meatResponse);
+                if (meatResponse == 1)
+                    userIngredients.Add("chicken");
+                else if (meatResponse == 2)
+                    userIngredients.Add("beef");
                 Console.WriteLine("Choose a sauce: ");
-                Console.WriteLine("spicy");
-                Console.WriteLine("sweet");
-                Console.WriteLine("branded");
-                Console.WriteLine("none");
-                var sauce = Console.ReadLine();
-
+                Console.WriteLine("1. spicy");
+                Console.WriteLine("2. sweet");
+                Console.WriteLine("3. branded");
+                Console.WriteLine("4. none");
+                var sauce = int.TryParse(Console.ReadLine(), out var parsedSauce);
+                if (parsedSauce == 1)
+                    userIngredients.Add("spicy sauce");
+                else if (parsedSauce == 2)
+                    userIngredients.Add("sweet sauce");
+                else if (parsedSauce == 3)
+                    userIngredients.Add("branded sauce");
             }
+            DisplayBurger(userIngredients);
         }
-        static void BurgerMenu(int burger)
+        static List<string> BurgerMenu(int burger)
         {
+            List<string> ingredients = new List<string>();
+
             if (burger == 1)
             {
-                DisplayBurger(cheeseBurger);
+                ingredients.AddRange(new List<string> { "bun", "melted cheese", "lettuce", "pickles", "hot sauce" });
             }
             else if (burger == 2)
             {
-                DisplayBurger(hamburger);
+                ingredients.AddRange(new List<string> { "bun", "lettuce", "sour cucumber", "beef", "sweet sauce" });
             }
             else if (burger == 3)
             {
-                DisplayBurger(branded);
+                ingredients.AddRange(new List<string> { "bun", "lettuce", "pickles", "chicken", "branded sauce" });
             }
-            else
-            {
-                Console.WriteLine("Invalid burger choice. Please choose 1, 2, or 3.");
-            }
+            DisplayBurger(ingredients);
+            return ingredients;
         }
     }
 }

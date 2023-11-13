@@ -1,6 +1,5 @@
 ﻿using Spectre.Console;
-using System.ComponentModel;
-using System.Numerics;
+using Spectre.Console.Prompts;
 
 namespace Classroom.AdvancedCalculator
 {

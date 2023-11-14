@@ -24,21 +24,23 @@ namespace Classroom.AnimalHierarchy
     internal class Dog: Animal 
     {
         public string Breed { get; set; }
-        public Dog(string name, int age) : base(name, age) => Breed = breed;
-       
+        public Dog(string name, int age, string breed) : base(name, age) => Breed = breed;
+        public override void MakeSound() => Console.WriteLine("");
     }
 
     internal class Cat : Animal
     {
+       
+
         public string Breed {  set; get; }
-        public Cat(string name, int age) : base(name, age) => Breed = breed;
-     
+        public Cat(string name, int age, string breed) : base(name, age) => Breed = breed;
+        public override void MakeSound() => Console.WriteLine("Meoow");
     }
 
     internal class Bird : Animal
-    {
+    {      
         public string Species { get; set; }
-        public Bird(string name, int age) : base(name, age) => Species = species;
+        public Bird(string name, int age, string species) : base(name, age) => Species = species;
 
         public override void MakeSound() => Console.WriteLine("");
         

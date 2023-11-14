@@ -4,10 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Cat myCat = new Cat("Fluffy", 3, "Persian");
+            Cat myCat = new Cat("Whiskers", 3, "Siamese");
+            Dog myDog = new Dog("Buddy", 5, "Labrador Retriever");
+            Bird myBird = new Bird("Tweety", 2, "Canary");
 
-            Console.WriteLine($"{myCat.Breed}");
+            List<Animal> animals = new List<Animal>
+            {
+                 myDog, myCat, myBird,
+            };
+            foreach (Animal animal in animals)
+            {
+                Console.WriteLine();
+                Console.WriteLine(animal);
+                Console.WriteLine();
+            }
         }
     }
 }

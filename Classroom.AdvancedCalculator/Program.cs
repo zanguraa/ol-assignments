@@ -1,5 +1,4 @@
 ﻿using Spectre.Console;
-using Spectre.Console.Prompts;
 
 namespace Classroom.AdvancedCalculator
 {

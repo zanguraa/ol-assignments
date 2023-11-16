@@ -23,7 +23,6 @@ namespace Classroom.AnimalHierarchy
         }
         public abstract void MakeSound();
     }
-
     internal class Dog: Animal 
     {
         public string Breed { get; set; }
@@ -34,7 +33,6 @@ namespace Classroom.AnimalHierarchy
             return base.ToString() + $" It is a {Breed}.";
         }
     }
-
     internal class Cat : Animal
     {
         public string Breed {  set; get; }
@@ -45,7 +43,6 @@ namespace Classroom.AnimalHierarchy
             return base.ToString() + $" It is a {Breed}.";
         }
     }
-
     internal class Bird : Animal
     {      
         public string Species { get; set; }

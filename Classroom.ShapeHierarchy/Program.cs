@@ -22,7 +22,6 @@ namespace Classroom.ShapeHierarchy
             Console.WriteLine();
             CalculateTriangle(triangle, triangleArea, trianglePerimeter);
         }
-
         static void CalculateCircle(Circle circle, double area, double perimeter)
         {
             Console.WriteLine($"Calculate with Radius: {circle.Radius}");

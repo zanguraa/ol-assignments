@@ -58,7 +58,7 @@
             if (op == "/" && second != 0)
             {
                 result = first / second;
-                Console.WriteLine($"{first} / {second} = {result}");
+                Console.WriteLine($"{first} / {second} = {result.ToString("0.00")}");
             }
             if (op == "/" && second == 0)
             {

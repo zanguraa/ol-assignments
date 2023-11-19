@@ -15,7 +15,7 @@
         }
         static bool CheckVowelOrNot(char letter)
         {
-            int[] vowelChars = { 'a', 'e', 'i', 'o', 'u', 'ა', 'ე', 'ი', 'ო', 'უ' };
+            char[] vowelChars = { 'a', 'e', 'i', 'o', 'u', 'ა', 'ე', 'ი', 'ო', 'უ' };
            if (vowelChars.Contains(letter))
             {
                 return true;

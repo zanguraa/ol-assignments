@@ -12,7 +12,6 @@ namespace Assignments.BurgerBuilder
         static void Main(string[] args)
         {
             bool isValidChoice = false;
-
             while (!isValidChoice)
             {
                 try

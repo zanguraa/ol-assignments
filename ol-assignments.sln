@@ -68,9 +68,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.AnimalHierarchy",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.ShapeHierarchy", "Classroom.ShapeHierarchy\Classroom.ShapeHierarchy.csproj", "{2EE5D8E3-74C8-4EE3-8946-1D43CA941EDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.SimpleCalculator.Tests", "Classroom.SimpleCalculator.Tests\Classroom.SimpleCalculator.Tests.csproj", "{8026A1EF-15BA-465F-9B67-A2C5B39BE08E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.SimpleCalculator.Tests", "Classroom.SimpleCalculator.Tests\Classroom.SimpleCalculator.Tests.csproj", "{8026A1EF-15BA-465F-9B67-A2C5B39BE08E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.SimpleCalculator", "Classroom.SimpleCalculator\Classroom.SimpleCalculator.csproj", "{48643A20-E362-4FAC-871E-A734CCC49B63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.SimpleCalculator", "Classroom.SimpleCalculator\Classroom.SimpleCalculator.csproj", "{48643A20-E362-4FAC-871E-A734CCC49B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.TextAnalyzerMedium", "Classroom.TextAnalyzerMedium\Classroom.TextAnalyzerMedium.csproj", "{EBEA576B-CD51-4174-8F5B-FDAAD8B72172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -206,6 +208,10 @@ Global
 		{48643A20-E362-4FAC-871E-A734CCC49B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48643A20-E362-4FAC-871E-A734CCC49B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48643A20-E362-4FAC-871E-A734CCC49B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEA576B-CD51-4174-8F5B-FDAAD8B72172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEA576B-CD51-4174-8F5B-FDAAD8B72172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEA576B-CD51-4174-8F5B-FDAAD8B72172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEA576B-CD51-4174-8F5B-FDAAD8B72172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

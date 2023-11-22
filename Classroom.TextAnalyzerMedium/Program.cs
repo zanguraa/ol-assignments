@@ -53,7 +53,6 @@ namespace Classroom.TextAnalyzerMedium
                     longestWordInLine = word;
                 }
             }
-
             return longestWordInLine;
         }
     }

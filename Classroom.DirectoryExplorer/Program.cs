@@ -14,6 +14,21 @@ namespace Classroom.DirectoryExplorer
             Instruction(instruction);
             AskUserFilePath();
             DirectoryExplorer(path);
+            FileExplorer(path);
+            Console.WriteLine("Enter a command or path:\r\n");
+            var userResponse = Console.ReadLine();
+
+            if (userResponse == null)
+            {
+                Console.WriteLine("Please enter command or path");
+            } else if(userResponse == "NEW")
+            {
+                AskUserFilePath();
+                CreateNewFolder(path);
+            } else if (userResponse == "DEL")
+            {
+                Console.WriteLine("Deleted");
+            }
 
         }
         static void Welcome(string message)
@@ -47,24 +62,33 @@ namespace Classroom.DirectoryExplorer
                     Console.WriteLine($" {counter++}.  {subdirectoryName}");
                 }
             }
+        }
+        static void FileExplorer(string path)
+        {
             string[] filesList = Directory.GetFiles(path);
-            if(filesList.Length > 0)
+            if (filesList.Length > 0)
             {
                 var filesCounter = 1;
                 Console.WriteLine("Files: ");
-                foreach(string file in filesList)
+                foreach (string file in filesList)
                 {
                     string fileName = Path.GetFileName(file);
                     Console.WriteLine($"{filesCounter++}. {fileName}");
                 }
             }
-
-           
-
         }
-        static void FileExplorer(string path)
+        static void CreateNewFolder(string path)
         {
-           
+            try
+            {
+                Directory.CreateDirectory(path);
+                Console.WriteLine($"Folder '{path}' created successfully.");
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString());
+            }
         }
     }
 }

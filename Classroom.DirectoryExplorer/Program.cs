@@ -21,15 +21,16 @@ namespace Classroom.DirectoryExplorer
             if (userResponse == null)
             {
                 Console.WriteLine("Please enter command or path");
-            } else if(userResponse == "NEW")
+            }
+            else if (userResponse == "NEW")
             {
                 AskUserFilePath();
                 CreateNewFolder(path);
-            } else if (userResponse == "DEL")
+            }
+            else if (userResponse == "DEL")
             {
                 AskUserFilePath();
                 DeleteFolder(path);
-
             }
 
         }

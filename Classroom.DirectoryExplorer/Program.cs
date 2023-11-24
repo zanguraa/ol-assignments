@@ -27,7 +27,9 @@ namespace Classroom.DirectoryExplorer
                 CreateNewFolder(path);
             } else if (userResponse == "DEL")
             {
-                Console.WriteLine("Deleted");
+                AskUserFilePath();
+                DeleteFolder(path);
+
             }
 
         }
@@ -89,6 +91,11 @@ namespace Classroom.DirectoryExplorer
             {
                 Console.WriteLine(ex.Message.ToString());
             }
+        }
+        static void DeleteFolder(string path)
+        {
+            Directory.Delete(path);
+            Console.WriteLine($"Folder is deleted successfully {path}");
         }
     }
 }

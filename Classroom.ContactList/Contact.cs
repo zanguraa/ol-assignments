@@ -18,7 +18,5 @@ namespace Classroom.ContactList
             PhoneNumber = phoneNumber;
             Email = email;
         }
-
-
     }
 }

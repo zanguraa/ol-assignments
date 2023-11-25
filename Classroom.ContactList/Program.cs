@@ -28,7 +28,7 @@
                     ShowAllContact();
                     break;
                 case "3":
-                    Console.WriteLine("Search Contacts");
+                    SearchContact();
                     break;
                 case "4":
                     Console.WriteLine("Exit");
@@ -49,6 +49,28 @@
         {
             _contactManager.GetContacts();
         }
+        private static void SearchContact()
+        {
+            Console.WriteLine("Enter the name to search for: ");
+            var userSearchInContact = Console.ReadLine();
 
+            Console.WriteLine("searching... ");
+
+            var searchResults = _contactManager.SearchContacts(userSearchInContact);
+
+            if (searchResults.Count > 0)
+            {
+                Console.WriteLine("Search results:");
+
+                foreach (var contact in searchResults)
+                {
+                    Console.WriteLine($"Name: {contact.Name}, Phone: {contact.PhoneNumber}, Email: {contact.Email}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No matching contacts found.");
+            }
+        }
     }
 }

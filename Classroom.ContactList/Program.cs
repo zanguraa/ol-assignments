@@ -16,10 +16,6 @@
                     break;
                 }
             }
-
-
-
-
         }
         static void UserChoice(string args)
         {
@@ -29,7 +25,7 @@
                     AddContact();
                     break;
                 case "2":
-                    _contactManager.GetContacts();
+                    ShowAllContact();
                     break;
                 case "3":
                     Console.WriteLine("Search Contacts");
@@ -39,7 +35,6 @@
                     break;
             }
         }
-
         private static void AddContact()
         {
             Console.WriteLine("Enter the contact's name:");
@@ -49,6 +44,10 @@
             Console.WriteLine("Enter the contact's email:");
             var userEmail = Console.ReadLine();
             _contactManager.AddContact(userName, userPhoneNumber, userEmail);
+        }
+        private static void ShowAllContact()
+        {
+            _contactManager.GetContacts();
         }
 
     }

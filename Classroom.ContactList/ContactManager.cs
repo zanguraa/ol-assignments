@@ -18,9 +18,12 @@ namespace Classroom.ContactList
             contacts.Add(newContact);
         }
 
-        public List<Contact> GetContacts()
+        public void GetContacts()
         {
-            return contacts;
+            foreach (var contact in contacts)
+            {
+                Console.WriteLine($"Name: {contact.Name}, Phone: {contact.PhoneNumber}, Email: {contact.Email}");
+            }
         }
     }
 }

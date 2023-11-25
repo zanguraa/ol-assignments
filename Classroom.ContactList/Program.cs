@@ -11,12 +11,13 @@
                 Console.WriteLine("Please choose an option:\r\n1. Add Contact\r\n2. View All Contacts\r\n3. Search Contacts\r\n4. Exit");
                 var userResponse = Console.ReadLine();
                 UserChoice(userResponse);
-                if (userResponse == "Exit")
+
+                if (userResponse == "4")
                 {
                     break;
                 }
             }
-        }
+            }
         static void UserChoice(string args)
         {
             switch (args)
@@ -31,7 +32,7 @@
                     SearchContact();
                     break;
                 case "4":
-                    Console.WriteLine("Exit");
+
                     break;
             }
         }

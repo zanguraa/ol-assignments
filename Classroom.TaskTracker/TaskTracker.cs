@@ -20,18 +20,19 @@ namespace Classroom.TaskTracker
         {
             if (tasks.ContainsKey(taskName))
             {
+                Console.WriteLine($"Task {taskName} status updated to {taskStatus}. \n");
                 tasks[taskName].TaskStatus = taskStatus;
             }
             else
             {
-                Console.WriteLine(" Console.WriteLine($\"Task '{taskName}' not found.\");");
+                Console.WriteLine($"Task {taskName} not found.");
             }
         }
         public void PrintTasks()
         {
             foreach (var task in tasks)
             {
-                Console.WriteLine($"Task: {task.Key}, Status: {task.Value.TaskStatus}");
+                Console.WriteLine($"Task: {task.Key}, Status: {task.Value.TaskStatus} \n");
             }
         }
     }

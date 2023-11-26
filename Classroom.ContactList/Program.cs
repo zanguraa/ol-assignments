@@ -17,7 +17,7 @@
                     break;
                 }
             }
-            }
+        }
         static void UserChoice(string args)
         {
             switch (args)

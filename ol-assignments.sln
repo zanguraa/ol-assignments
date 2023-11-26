@@ -76,7 +76,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TextAnalyzerMediu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.DirectoryExplorer", "Classroom.DirectoryExplorer\Classroom.DirectoryExplorer.csproj", "{DFF8253E-9308-4548-B003-B5C9D7FA8BC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.ContactList", "Classroom.ContactList\Classroom.ContactList.csproj", "{412D0B99-7D12-4325-9D19-D4BD55C01D6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.ContactList", "Classroom.ContactList\Classroom.ContactList.csproj", "{412D0B99-7D12-4325-9D19-D4BD55C01D6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.TaskTracker", "Classroom.TaskTracker\Classroom.TaskTracker.csproj", "{F47DEC00-6DE5-4513-B8A7-840188233DCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -224,6 +226,10 @@ Global
 		{412D0B99-7D12-4325-9D19-D4BD55C01D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{412D0B99-7D12-4325-9D19-D4BD55C01D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{412D0B99-7D12-4325-9D19-D4BD55C01D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,7 +16,6 @@
                     break;
                 }
             }
-
         }
 
         private static void Welcome()
@@ -35,7 +34,6 @@
                 case "3": ViewAllTask(); break;
             }
         }
-
         private static void AddTask()
         {
             Console.WriteLine("Enter task description: ");

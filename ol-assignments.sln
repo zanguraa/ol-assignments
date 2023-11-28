@@ -78,7 +78,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.DirectoryExplorer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.ContactList", "Classroom.ContactList\Classroom.ContactList.csproj", "{412D0B99-7D12-4325-9D19-D4BD55C01D6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.TaskTracker", "Classroom.TaskTracker\Classroom.TaskTracker.csproj", "{F47DEC00-6DE5-4513-B8A7-840188233DCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TaskTracker", "Classroom.TaskTracker\Classroom.TaskTracker.csproj", "{F47DEC00-6DE5-4513-B8A7-840188233DCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.EventDrivenTemperatureMonitor", "Classroom.EventDrivenTemperatureMonitor\Classroom.EventDrivenTemperatureMonitor.csproj", "{C8D47B33-FC59-4A2F-B19C-3AB6A5CC3363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -230,6 +232,10 @@ Global
 		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F47DEC00-6DE5-4513-B8A7-840188233DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D47B33-FC59-4A2F-B19C-3AB6A5CC3363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D47B33-FC59-4A2F-B19C-3AB6A5CC3363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D47B33-FC59-4A2F-B19C-3AB6A5CC3363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D47B33-FC59-4A2F-B19C-3AB6A5CC3363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

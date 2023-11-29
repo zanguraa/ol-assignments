@@ -9,6 +9,7 @@
 
             Console.WriteLine(userResponse.Reverse());
             Console.WriteLine(userResponse.ToTitleCase());
+            Console.WriteLine(userResponse.WordCount());
 
         }
     }

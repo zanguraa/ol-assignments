@@ -39,5 +39,15 @@ namespace Classroom.ExxtendedStringManipulation
             }
             return titleWord;
         }
+        public static string WordCount(this string word)
+        {
+            var wordSplit = word.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            var count = 0;
+            for(int i = 0; i < wordSplit.Length; i++)
+            {
+                count++;
+            }
+            return count.ToString();
+        }
     }
 }

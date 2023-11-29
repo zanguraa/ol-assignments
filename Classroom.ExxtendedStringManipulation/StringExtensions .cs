@@ -22,6 +22,22 @@ namespace Classroom.ExxtendedStringManipulation
             }
             return reversedWord;
         }
+        public static string ToTitleCase(this string word)
+        {
+            var titleWord = "";
+            var splitedWords = word.Split(' ');
 
+            for (var i = 0; i < splitedWords.Length; i++)
+            {
+                var currentWord = splitedWords[i];
+                if (!String.IsNullOrEmpty(currentWord))
+                {
+                    var capitalizedWord = char.ToUpper(currentWord[0]) + currentWord.Substring(1).ToLower();
+                    titleWord += capitalizedWord;
+                    if (i < splitedWords.Length - 1) { titleWord += " "; }
+                }
+            }
+            return titleWord;
+        }
     }
 }

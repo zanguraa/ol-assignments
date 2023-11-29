@@ -5,8 +5,10 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello, Please enter some word: ");
-            var userResponse = Console.ReadLine().Reverse();
-            Console.WriteLine(userResponse);
+            var userResponse = Console.ReadLine();
+
+            Console.WriteLine(userResponse.Reverse());
+            Console.WriteLine(userResponse.ToTitleCase());
 
         }
     }

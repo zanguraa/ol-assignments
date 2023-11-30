@@ -6,11 +6,13 @@
         {
             Console.WriteLine("Hello, Please enter some word: ");
             var userResponse = Console.ReadLine();
-
-            Console.WriteLine(userResponse.Reverse());
-            Console.WriteLine(userResponse.ToTitleCase());
-            Console.WriteLine(userResponse.WordCount());
-
+            PrintUserResponse(userResponse);
+        }
+        public static void PrintUserResponse(string userResponse)
+        {
+            Console.WriteLine($"Original String: {userResponse} ");
+            Console.WriteLine($"Reversed: {userResponse.Reverse()}");
+            Console.WriteLine($"Word Count: {userResponse.WordCount()}");
         }
     }
 }

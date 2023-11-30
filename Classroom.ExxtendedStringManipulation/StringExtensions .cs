@@ -8,7 +8,6 @@ namespace Classroom.ExxtendedStringManipulation
 {
     public static class StringExtensions
     {
-
         public static string Reverse(this string word)
         {
             var reversedWord = "";

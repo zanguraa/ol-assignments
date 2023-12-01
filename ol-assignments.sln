@@ -82,7 +82,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TaskTracker", "Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.EventDrivenTemperatureMonitor", "Classroom.EventDrivenTemperatureMonitor\Classroom.EventDrivenTemperatureMonitor.csproj", "{C8D47B33-FC59-4A2F-B19C-3AB6A5CC3363}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.ExxtendedStringManipulation", "Classroom.ExxtendedStringManipulation\Classroom.ExxtendedStringManipulation.csproj", "{F728DB46-2300-4E96-BFFC-5450D5AF9AA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.ExxtendedStringManipulation", "Classroom.ExxtendedStringManipulation\Classroom.ExxtendedStringManipulation.csproj", "{F728DB46-2300-4E96-BFFC-5450D5AF9AA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.ConcurrentFileProcessing", "Classroom.ConcurrentFileProcessing\Classroom.ConcurrentFileProcessing.csproj", "{4976EB1B-DF49-41E7-9721-4357A6736C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -242,6 +244,10 @@ Global
 		{F728DB46-2300-4E96-BFFC-5450D5AF9AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F728DB46-2300-4E96-BFFC-5450D5AF9AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F728DB46-2300-4E96-BFFC-5450D5AF9AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4976EB1B-DF49-41E7-9721-4357A6736C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4976EB1B-DF49-41E7-9721-4357A6736C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4976EB1B-DF49-41E7-9721-4357A6736C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4976EB1B-DF49-41E7-9721-4357A6736C90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

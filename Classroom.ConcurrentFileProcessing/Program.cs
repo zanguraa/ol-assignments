@@ -10,21 +10,27 @@
 
             Console.WriteLine("Please enter the operation (countlines/findword): \r\n");
             var operation = Console.ReadLine();
-            Console.WriteLine("Enter file paths (separated by a comma): ");
-            var filePath = Console.ReadLine();
-            ChooseOperation(filePath, operation);
-
+            ChooseOperation(operation);
         }
-        static void ChooseOperation(string operation, string filePath)
+        static void ChooseOperation(string operation)
         {
             if (operation.ToLower() == "countlines")
             {
-            CountLines(filePath);
+                Console.WriteLine("Enter file paths (separated by a comma): ");
+                var filePath = Console.ReadLine();
+                CountLines(filePath);
             }
-            else if(operation.ToLower() == "findword")
+            else if (operation.ToLower() == "findword")
             {
+                Console.WriteLine("Enter file paths (separated by a comma): ");
+                var filePath = Console.ReadLine().ToLower();
                 Console.WriteLine("enter the word to find: ");
-                var wordToFind = Console.ReadLine();
+                var wordToFind = Console.ReadLine().ToLower();
+                FindWord(filePath, wordToFind);
+            }
+            else
+            {
+                Console.WriteLine("Invalid operation");
             }
         }
         static void CountLines(string filePath)
@@ -36,7 +42,14 @@
         static void FindWord(string filePath, string wordToFind)
         {
             string words = File.ReadAllText(filePath);
-            
+            var wordCount = 0;
+            int index = words.IndexOf(wordToFind);
+            while (index != -1)
+            {
+                wordCount++;
+                index = words.IndexOf(wordToFind, index + 1);
+            }
+            Console.WriteLine($"{filePath} - Words counted: {wordCount}");
         }
     }
 

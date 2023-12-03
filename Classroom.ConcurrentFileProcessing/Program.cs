@@ -3,22 +3,39 @@
     internal class Program
     {
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var file1 = @"C:\Users\zangura\Downloads\text.txt";
+            string file1 = @"C:\Users\zangura\Downloads\text.txt";
             var file2 = @"C:\Users\zangura\Downloads\text2.txt";
 
             Console.WriteLine("Please enter the operation (countlines/findword): \r\n");
             var operation = Console.ReadLine();
-            ChooseOperation(operation);
+            Console.WriteLine("Enter file paths (separated by a comma): ");
+            var filePathsInput = Console.ReadLine();
+
+            string[] filePaths = filePathsInput?.Split(',');
+
+            if (filePaths != null && filePaths.Length == 2)
+            {
+                await ChooseOperation(operation, filePaths[0].Trim(), filePaths[1].Trim());
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please provide exactly two file paths separated by a comma.");
+            }
         }
-        static async void ChooseOperation(string operation)
+        static async Task ChooseOperation(string operation, string filePath1, string filePath2)
         {
             if (operation.ToLower() == "countlines")
             {
-                Console.WriteLine("Enter file paths (separated by a comma): ");
-                var filePath = Console.ReadLine();
-                CountLines(filePath);
+                Task<int> task1 = CountLines(filePath1);
+                Task<int> task2 = CountLines(filePath2);
+
+                await Task.WhenAll(task1, task2);
+
+                Console.WriteLine($"{filePath1} - Lines Counted: {task1.Result}");
+                Console.WriteLine($"{filePath2} - Lines Counted: {task2.Result}");
+
             }
             else if (operation.ToLower() == "findword")
             {
@@ -33,18 +50,20 @@
                 Console.WriteLine("Invalid operation");
             }
         }
-        static void CountLines(string filePath)
+        static async Task<int> CountLines(string filePath)
         {
-            int linesCount = 0;
-            using (StreamReader sr = new StreamReader(filePath))
+            return await Task.Run(() =>
             {
-                while (sr.ReadLine() != null)
+                int linesCount = 0;
+                using (StreamReader sr = new StreamReader(filePath))
                 {
-                    linesCount++;
+                    while (sr.ReadLine() != null)
+                    {
+                        linesCount++;
+                    }
                 }
-            }
-
-            Console.WriteLine($"{filePath} - Lines Counted: {linesCount}");
+                return linesCount;
+            });
         }
         static void FindWord(string filePath, string wordToFind)
         {

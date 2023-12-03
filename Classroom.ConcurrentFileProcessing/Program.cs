@@ -12,7 +12,7 @@
             var operation = Console.ReadLine();
             ChooseOperation(operation);
         }
-        static void ChooseOperation(string operation)
+        static async void ChooseOperation(string operation)
         {
             if (operation.ToLower() == "countlines")
             {
@@ -35,8 +35,15 @@
         }
         static void CountLines(string filePath)
         {
-            string[] lines = File.ReadAllLines(filePath);
-            int linesCount = lines.Length;
+            int linesCount = 0;
+            using (StreamReader sr = new StreamReader(filePath))
+            {
+                while (sr.ReadLine() != null)
+                {
+                    linesCount++;
+                }
+            }
+
             Console.WriteLine($"{filePath} - Lines Counted: {linesCount}");
         }
         static void FindWord(string filePath, string wordToFind)

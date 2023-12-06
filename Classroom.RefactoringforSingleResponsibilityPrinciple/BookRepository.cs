@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Classroom.RefactoringforSingleResponsibilityPrinciple
 {
-    public class BookRepository
+    public class BookRepository : IBookRepository
     {
         public void UpdateInventory(Book book)
         {
             // Update inventory
+            
         }
 
         public Book GetBookById(int bookId)

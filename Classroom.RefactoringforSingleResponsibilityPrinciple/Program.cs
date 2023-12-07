@@ -1,43 +1,42 @@
-﻿namespace Classroom.RefactoringforSingleResponsibilityPrinciple
+﻿public class BookStore
 {
-    public class BookStore
+    public void ProcessSale(int userId, int bookId)
     {
-        private readonly BookRepository bookRepository;
-        public BookStore(BookRepository bookRepository)
+        var book = GetBookById(bookId);
+        if (book.IsAvailable())
         {
-            this.bookRepository = bookRepository;
+            UpdateInventory(book);
+            var invoice = GenerateInvoice(book);
+
+            var user = GetUserById(userId);
+            SendInvoiceEmail(invoice, user.Email);
         }
-        public void ProcessSale(int userId, int bookId)
-        {
+    }
 
-            var book = bookRepository.GetBookById(userId);
-            if (book.IsAvailable())
-            {
-                bookRepository.UpdateInventory(book);
-                var invoice = GenerateInvoice(book);
+    private void SendInvoiceEmail(Invoice invoice, string email)
+    {
+        // TODO: Send email
+    }
 
-                var user = GetUserById(userId);
-                SendInvoiceEmail(invoice, user.Email);
-            }
-        }
+    private User GetUserById(int userId)
+    {
+        // TODO: Get user by id
+        return new User();
+    }
 
-        private void SendInvoiceEmail(Invoice invoice, string email)
-        {
-            // TODO: Send email
+    private void UpdateInventory(Book book)
+    {
+        // Update inventory
+    }
 
-        }
+    private Book GetBookById(int bookId)
+    {
+        // TODO: Get book by id
+        return new Book();
+    }
 
-        private User GetUserById(int userId)
-        {
-            // TODO: Get user by id
-            return new User();
-        }
-
-
-        public Invoice GenerateInvoice(Book book)
-        {
-            return new Invoice();
-            // Generate invoice
-        }
+    public Invoice GenerateInvoice(Book book)
+    {
+        // Generate invoice
     }
 }

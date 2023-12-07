@@ -8,9 +8,8 @@ namespace Classroom.RefactoringforSingleResponsibilityPrinciple
 {
     public class EmailService
     {
-        private void SendInvoiceEmail(Invoice invoice, string email)
+        public void SendInvoiceEmail(Invoice invoice, string email)
         {
-            // TODO: Send email
         }
     }
 }

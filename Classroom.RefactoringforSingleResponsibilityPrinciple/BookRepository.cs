@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Classroom.RefactoringforSingleResponsibilityPrinciple
 {
-    public interface IBookRepository
+    public class BookRepository: IBookRepository
     {
-        Book GetBookById(int id);
+        public Book GetBookById(int bookId)
+        {
+            return new Book();
+        }
     }
 }

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Classroom.RefactoringforSingleResponsibilityPrinciple
 {
-    public interface IBookRepository
+    public class InvoiceGenerator
     {
-        Book GetBookById(int id);
+        public Invoice GenerateInvoice(Book book)
+        {
+            return new Invoice();
+        }
     }
 }

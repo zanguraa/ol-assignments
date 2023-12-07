@@ -1,12 +1,8 @@
 ﻿public class User
 {
-    public User()
-    {
-        
-    }
+    public string Email { get; internal set; }
     public User GetUserById(int userId)
     {
-        // TODO: Get user by id
         return new User();
     }
 }

@@ -8,9 +8,8 @@ namespace Classroom.RefactoringforSingleResponsibilityPrinciple
 {
     public class InventoryManager
     {
-        public InventoryManager(Book book)
+        public void UpdateInventory(Book book)
         {
-            
         }
     }
 }

@@ -13,16 +13,9 @@
         }
     }
 
-    private void SendInvoiceEmail(Invoice invoice, string email)
-    {
-        // TODO: Send email
-    }
+   
 
-    private User GetUserById(int userId)
-    {
-        // TODO: Get user by id
-        return new User();
-    }
+   
 
     private void UpdateInventory(Book book)
     {

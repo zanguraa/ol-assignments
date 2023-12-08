@@ -90,6 +90,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.RefactoringforSin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.LibrarySystem", "Classroom.LibrarySystem\Classroom.LibrarySystem.csproj", "{C09F96FE-BA99-4802-B049-C659DF59D8C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.BookingManager", "Classroom.BookingManager\Classroom.BookingManager.csproj", "{36B28B47-3B1C-40D1-94AF-5CD6F2D5D2EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -260,6 +262,10 @@ Global
 		{C09F96FE-BA99-4802-B049-C659DF59D8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09F96FE-BA99-4802-B049-C659DF59D8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C09F96FE-BA99-4802-B049-C659DF59D8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36B28B47-3B1C-40D1-94AF-5CD6F2D5D2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36B28B47-3B1C-40D1-94AF-5CD6F2D5D2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36B28B47-3B1C-40D1-94AF-5CD6F2D5D2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36B28B47-3B1C-40D1-94AF-5CD6F2D5D2EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

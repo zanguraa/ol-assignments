@@ -49,7 +49,7 @@
                     if (user.LoyaltyPoints >= 100)
                     {
                         newBooking.Price =
-                            CalculatePrice(roomId, startDate, endDate) - 10; // Discount for loyalty points
+                            CalculatePrice(request.RoomId, request.StartDate, request.EndDate) - 10; // Discount for loyalty points
                         user.LoyaltyPoints -= 100;
                     }
                     else
@@ -57,9 +57,9 @@
                         throw new Exception("Not enough loyalty points");
                     }
                 }
-                else
+                
                 {
-                    newBooking.Price = CalculatePrice(roomId, startDate, endDate);
+                    newBooking.Price = CalculatePrice(request.RoomId, request.StartDate, request.EndDate);
                 }
 
                 SaveBooking(newBooking); // Assume this saves the booking to the database

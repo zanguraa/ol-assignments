@@ -19,6 +19,12 @@
 
             var hash = stringExample.CalculateHash();
             Console.WriteLine($"This is HASH256: {hash}");
+            string filePath = @"C:\Users\Zangura\Downloads\newCreated\tests.txt";
+            stringExample.SaveToFile(filePath);
+            Console.WriteLine($"File saved successfully at: {filePath}");
+
         }
+
+
     }
 }

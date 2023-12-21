@@ -11,7 +11,7 @@ namespace Assignments.ExtensionFunctions
     {
         public static bool IsNumber(this string str)
         {
-            return double.TryParse(str, out  var number);   
+            return double.TryParse(str, out var number);
         }
 
         public static bool IsDate(this string str)
@@ -28,9 +28,22 @@ namespace Assignments.ExtensionFunctions
         public static string CalculateHash(this string str)
         {
             var algo = HashAlgorithm.Create("sha256");
-            var hash = algo.ComputeHash(Encoding.UTF8.GetBytes(str));
+            var hash = algo?.ComputeHash(Encoding.UTF8.GetBytes(str));
             var output = BitConverter.ToString(hash);
             return output;
         }
+
+        public static void SaveToFile(this string content, string filePath)
+        {
+            var directory = Path.GetDirectoryName(filePath);
+
+            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            File.WriteAllText(filePath, content);
+        }
     }
 }
+

@@ -23,6 +23,10 @@
             stringExample.SaveToFile(filePath);
             Console.WriteLine($"File saved successfully at: {filePath}");
 
+            double percent = 3.9;
+            Console.WriteLine(percent.ToPercent());
+            Console.WriteLine($"rounded to down: {percent.RoundDown()}");
+
         }
 
 

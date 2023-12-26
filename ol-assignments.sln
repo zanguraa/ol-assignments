@@ -92,7 +92,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.LibrarySystem", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.BookingManager", "Classroom.BookingManager\Classroom.BookingManager.csproj", "{36B28B47-3B1C-40D1-94AF-5CD6F2D5D2EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.ExtensionFunctions", "Assignments.ExtensionFunctions\Assignments.ExtensionFunctions.csproj", "{BF128DAD-B90F-4F0A-924E-923BD471AE4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.ExtensionFunctions", "Assignments.ExtensionFunctions\Assignments.ExtensionFunctions.csproj", "{BF128DAD-B90F-4F0A-924E-923BD471AE4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.AdoNetBookLibrary", "Classroom.AdoNetBookLibrary\Classroom.AdoNetBookLibrary.csproj", "{BF9208EC-2A16-4C91-969B-2ABD3F477328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -272,6 +274,10 @@ Global
 		{BF128DAD-B90F-4F0A-924E-923BD471AE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF128DAD-B90F-4F0A-924E-923BD471AE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF128DAD-B90F-4F0A-924E-923BD471AE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9208EC-2A16-4C91-969B-2ABD3F477328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9208EC-2A16-4C91-969B-2ABD3F477328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9208EC-2A16-4C91-969B-2ABD3F477328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9208EC-2A16-4C91-969B-2ABD3F477328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

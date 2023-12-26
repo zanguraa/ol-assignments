@@ -17,10 +17,31 @@ namespace Classroom.AdoNetBookLibrary
 
             await connection.OpenAsync();
 
+            var insertQuery = $"INSERT INTO dbo.Books (Title, AuthorId, YearPublished) values (@Title, @AuthorId, @YearPublished)";
             var query = $"SELECT Id, Title, YearPublished FROM dbo.Books WHERE YearPublished > @YearPublished";
 
 
+            string title = "book1";
+            int authorId = 3;
+            int yearPublished = 2003;
+
             SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand insertCommand = new SqlCommand(insertQuery, connection);
+            insertCommand.CommandType = CommandType.Text;
+            insertCommand.Parameters.AddWithValue("@Title", title);
+            insertCommand.Parameters.AddWithValue("@AuthorId", authorId);
+            insertCommand.Parameters.AddWithValue("@YearPublished", yearPublished);
+            int rowsAffected = await insertCommand.ExecuteNonQueryAsync();
+
+            if (rowsAffected > 0)
+            {
+                Console.WriteLine($"Insert successful. Rows affected: {rowsAffected}");
+            }
+            else
+            {
+                Console.WriteLine("Insert failed.");
+            }
+
             adapter.SelectCommand = new SqlCommand(query, connection);
             adapter.SelectCommand.CommandType = System.Data.CommandType.Text;
             adapter.SelectCommand.Parameters.AddWithValue("@YearPublished", 2000);

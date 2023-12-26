@@ -13,10 +13,14 @@ namespace Assignments.ExtensionFunctions
             double percent = value * 100;
             return percent;
         }
-       public static double RoundDown(this double value)
+        public static double RoundDown(this double value)
         {
-            int intValue = (int)value;  
+            int intValue = (int)value;
             return value < 0 ? intValue - 1 : intValue;
+        }
+        public static decimal ToDecimal(this double value)
+        {
+            return (decimal)value;
         }
     }
 }

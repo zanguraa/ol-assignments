@@ -26,7 +26,7 @@
             double percent = 3.9;
             Console.WriteLine(percent.ToPercent());
             Console.WriteLine($"rounded to down: {percent.RoundDown()}");
-
+            Console.WriteLine($"to decimal: {percent.ToDecimal()}");
         }
 
 

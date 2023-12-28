@@ -4,6 +4,20 @@
     {
         static void Main(string[] args)
         {
+            DateTime date = new DateTime(2020, 2, 27);
+            DateTime now = DateTime.Now;
+            DateTime compareDate = date.DateTimeMin(now);
+            DateTime compareDateMax = date.DateTimeMax(now);
+            Console.WriteLine("min" + compareDate);
+            Console.WriteLine("max" + compareDateMax);
+            DateTime firstDayOfMonth = date.BeginingOfMonth();
+            DateTime lastDayOfMonth = date.EndOfMonth();
+            Console.WriteLine($"the first day of month: {firstDayOfMonth}");
+            Console.WriteLine($"the last day of this month: {lastDayOfMonth}");
+
+
+
+
             //Console.WriteLine("Hello, World!");
             //var number = "01.2020";
             //string stringExample = "extension functions";
@@ -33,7 +47,5 @@
             //Console.WriteLine(compare);
             //Console.WriteLine(compareLess);
         }
-
-
     }
 }

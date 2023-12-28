@@ -4,29 +4,34 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            var number = "01.2020";
-            string stringExample = "extension functions";
-            number.IsNumber();
-            Console.WriteLine($"Is number or not: {number.IsNumber()} ");
-            Console.WriteLine($"Is Date or not: {number.IsDate()}");
+            //Console.WriteLine("Hello, World!");
+            //var number = "01.2020";
+            //string stringExample = "extension functions";
+            //number.IsNumber();
+            //Console.WriteLine($"Is number or not: {number.IsNumber()} ");
+            //Console.WriteLine($"Is Date or not: {number.IsDate()}");
 
-            string[] stringArrayExample = stringExample.ToWords();
-            foreach ( string words in stringArrayExample )
-            {
-                Console.WriteLine( words );
-            }
+            //string[] stringArrayExample = stringExample.ToWords();
+            //foreach ( string words in stringArrayExample )
+            //{
+            //    Console.WriteLine( words );
+            //}
 
-            var hash = stringExample.CalculateHash();
-            Console.WriteLine($"This is HASH256: {hash}");
-            string filePath = @"C:\Users\Zangura\Downloads\newCreated\tests.txt";
-            stringExample.SaveToFile(filePath);
-            Console.WriteLine($"File saved successfully at: {filePath}");
+            //var hash = stringExample.CalculateHash();
+            //Console.WriteLine($"This is HASH256: {hash}");
+            //string filePath = @"C:\Users\Zangura\Downloads\newCreated\tests.txt";
+            //stringExample.SaveToFile(filePath);
+            //Console.WriteLine($"File saved successfully at: {filePath}");
 
-            double percent = 3.9;
-            Console.WriteLine(percent.ToPercent());
-            Console.WriteLine($"rounded to down: {percent.RoundDown()}");
-            Console.WriteLine($"to decimal: {percent.ToDecimal()}");
+            //double percent = 3.9;
+            //Console.WriteLine(percent.ToPercent());
+            //Console.WriteLine($"rounded to down: {percent.RoundDown()}");
+            //Console.WriteLine($"to decimal: {percent.ToDecimal()}");
+            //double numb = 23;
+            //bool compare = numb.IsGreater( 233 );
+            //bool compareLess = numb.IsLess(233);
+            //Console.WriteLine(compare);
+            //Console.WriteLine(compareLess);
         }
 
 

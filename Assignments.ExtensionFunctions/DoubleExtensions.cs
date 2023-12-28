@@ -22,5 +22,21 @@ namespace Assignments.ExtensionFunctions
         {
             return (decimal)value;
         }
+        public static bool IsGreater(this double number, double compareNumber)
+        {
+           if(number < compareNumber)
+            {
+                return true;
+            }
+           return false;
+        }
+        public static bool IsLess(this double number, double compareNumber)
+        {
+            if (number < compareNumber)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

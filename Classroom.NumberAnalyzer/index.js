@@ -34,9 +34,20 @@ function calculateMax(arrayofNumbers) {
   return max;
 }
 
-calculateSum(arrayofNumbers);
-calculateMin(arrayofNumbers);
-calculateMax(arrayofNumbers);
+function findEvenNumbers(arrayofNumbers) {
+  let evenNumbers = [];
+
+  for (let i = 0; i < arrayofNumbers.length; i++) {
+    if (arrayofNumbers[i] % 2 === 0) {
+      evenNumbers.push(arrayofNumbers[i]);
+    }
+  }
+
+  return evenNumbers;
+}
+
+
 console.log(`sum numbers:  ${calculateSum(arrayofNumbers)} `);
 console.log(`calculate min: ${calculateMin(arrayofNumbers)}`);
 console.log(`calculate max: ${calculateMax(arrayofNumbers)}`);
+console.log(`even numbers: ${findEvenNumbers(arrayofNumbers)}`);

@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div class="display">
-        <input type="number" class="display-input" value=0 ></input>
+        <input type="text" class="display-input" id="result" placeholder="0" ></input>
       </div>
       <div class="operators-row">
         <span class="clicked" id="clear">C</span>
@@ -19,22 +19,23 @@
       <div class="operators-column">
         <span class="clicked operators" id="minus">-</span>
         <span class="clicked operators add" id="plus">+</span>
-        <span class="clicked operators green-background" id="equals">=</span>
+        <span class="clicked operators green-background" id="equal">=</span>
       </div>
       <div class="numbers-container">
-        <span class="clicked numbers" id="seven">7</span>
-        <span class="clicked numbers" id="eight">8</span>
-        <span class="clicked numbers" id="nine">9</span>
-        <span class="clicked numbers" id="four">4</span>
-        <span class="clicked numbers" id="five">5</span>
-        <span class="clicked numbers" id="six">6</span>
-        <span class="clicked numbers" id="one">1</span>
-        <span class="clicked numbers" id="two">2</span>
-        <span class="clicked numbers" id="three">3</span>
-        <span class="clicked numbers" id="zero">0</span>
-        <span class="clicked numbers" id="two-zero">00</span>
-        <span class="clicked numbers" id="decimal">.</span>
+        <button class="clicked numbers" value="7" id="seven">7</button>
+        <button class="clicked numbers" value="8" id="eight">8</button>
+        <button class="clicked numbers" value="9" id="nine">9</button>
+        <button class="clicked numbers" value="4" id="four">4</button>
+        <button class="clicked numbers" value="5" id="five">5</button>
+        <button class="clicked numbers" value="6" id="six">6</button>
+        <button class="clicked numbers" value="1" id="one">1</button>
+        <button class="clicked numbers" value="2" id="two">2</button>
+        <button class="clicked numbers" value="3" id="three">3</button>
+        <button class="clicked numbers" value="0" id="zero">0</button>
+        <button class="clicked numbers" value="00" id="two-zero">00</button>
+        <button class="clicked decimal" value="." id="decimal">.</button>
       </div>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>

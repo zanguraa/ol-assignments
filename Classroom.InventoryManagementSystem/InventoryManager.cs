@@ -19,6 +19,18 @@ namespace Classroom.InventoryManagementSystem
              this.connectionString = connectionString;
         }
 
+        public Products GetProducts(string name)
+        {
+            using (var connection = new SqlConnection(this.connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Products WHERE Name LIKE '%' + @name + '%'";
+
+                return connection.QueryFirstOrDefault<Products>(query, new { name });
+            }
+        }
+
         public void AddProduct(Products products)
         {
             using(SqlConnection connection = new SqlConnection(connectionString))
@@ -54,6 +66,39 @@ namespace Classroom.InventoryManagementSystem
             }
         }
 
+        public void RecordSale(Products product, int quantitySold)
+        {
+            using(SqlConnection connencion =new SqlConnection(connectionString))
+            {
+                connencion.Open();
+                if (product.Stock >= quantitySold)
+                {
+                    product.Stock -= quantitySold;
+                    connencion.Execute("UPDATE Products SET Stock = @Stock WHERE Id = @ProductId", new { Stock = product.Stock, ProductId = product.Id });
 
+                    Sales sale = new Sales
+                    {
+                        ProductId = product.Id,
+                        Quantity = quantitySold,
+                        SaleDate = DateTime.Now,
+                    };
+
+                    connencion.Execute("INSERT INTO Sales (ProductId, Quantity, SaleDate) VALUES (@ProductId, @Quantity, @SaleDate)", sale);
+                }
+                else
+                {
+                    Console.WriteLine("Not enought stock available for the sale");
+                }
+            }
+        }
+
+        public IEnumerable<Products> GetAllProducts()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<Products>("SELECT * FROM Products");
+            }
+        }
     }
 }

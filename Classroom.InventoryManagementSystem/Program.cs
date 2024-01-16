@@ -31,17 +31,16 @@ else
     switch (parsedResponse)
     {
         case 1:
-            // Add Products logic
             AddProduct(inventoryManager);
             break;
         case 2:
-            // Find Products logic
+            SearchProduct(inventoryManager);
             break;
         case 3:
-            // Delete Products logic
+            
             break;
         case 4:
-            // Find All Product logic
+            GetAllProduct(inventoryManager);
             break;
         default:
             Console.WriteLine("Invalid choice. Please enter a valid option.");
@@ -68,17 +67,51 @@ static void AddProduct(InventoryManager inventoryManager)
     Console.WriteLine("9) Automotive");
     var response = int.TryParse(Console.ReadLine(), out int parsedResponse);
 
-
-
-
-    Products newProduct = new Products
+    if(parsedResponse > 0 && parsedResponse <= 9)
     {
-        Name = name,
-        Price = price,
-        Stock = stock,
-        CategoryId = parsedResponse
-    };
+        Products newProduct = new Products
+        {
+            Name = name,
+            Price = price,
+            Stock = stock,
+            CategoryId = parsedResponse
+        };
 
-    inventoryManager.AddProduct(newProduct);
-    Console.WriteLine("Product was added successfully.");
+        inventoryManager.AddProduct(newProduct);
+        Console.WriteLine("Product was added successfully.");
+    }
+
+
+    
+}
+
+static void SearchProduct(InventoryManager inventoryManager)
+{
+    Console.WriteLine("please enter product name for search: ");
+    var name = Console.ReadLine();
+
+    var searchedName = inventoryManager.GetProducts(name);
+
+    if(searchedName != null)
+    {
+        Console.WriteLine($"Your product was found: {searchedName.Name}");
+    }
+    else
+    {
+        Console.WriteLine("pleas enter some value! ");
+    }
+
+
+
+}
+
+
+static void GetAllProduct(InventoryManager inventoryManager)
+{
+    var allProducts = inventoryManager.GetAllProducts();
+
+    foreach (var product in allProducts)
+    {
+        Console.WriteLine($"Product ID: {product.Id}, Name: {product.Name}, Price: {product.Price}, Stock: {product.Stock}");
+    }
 }

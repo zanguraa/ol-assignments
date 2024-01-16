@@ -92,12 +92,12 @@ namespace Classroom.InventoryManagementSystem
             }
         }
 
-        public IEnumerable<Products> GetAllProducts()
+        public List<Products> GetAllProducts()
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<Products>("SELECT * FROM Products");
+                return connection.Query<Products>("SELECT * FROM Products").ToList();
             }
         }
     }

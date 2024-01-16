@@ -16,7 +16,7 @@ namespace Classroom.InventoryManagementSystem
 
         public InventoryManager(string connectionString)
         {
-             this.connectionString = connectionString;
+            this.connectionString = connectionString;
         }
 
         public Products GetProducts(string name)
@@ -33,7 +33,7 @@ namespace Classroom.InventoryManagementSystem
 
         public void AddProduct(Products products)
         {
-            using(SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 connection.Execute("INSERT INTO Products (Name, Price, Stock, CategoryId) VALUES (@Name, @Price, @Stock, @CategoryId)", products);
@@ -68,7 +68,7 @@ namespace Classroom.InventoryManagementSystem
 
         public void RecordSale(Products product, int quantitySold)
         {
-            using(SqlConnection connencion =new SqlConnection(connectionString))
+            using (SqlConnection connencion = new SqlConnection(connectionString))
             {
                 connencion.Open();
                 if (product.Stock >= quantitySold)

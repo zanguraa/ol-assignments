@@ -37,7 +37,7 @@ else
             SearchProduct(inventoryManager);
             break;
         case 3:
-            
+
             break;
         case 4:
             GetAllProduct(inventoryManager);
@@ -70,7 +70,7 @@ static void AddProduct(InventoryManager inventoryManager)
     Console.WriteLine("9) Automotive");
     var response = int.TryParse(Console.ReadLine(), out int parsedResponse);
 
-    if(parsedResponse > 0 && parsedResponse <= 9)
+    if (parsedResponse > 0 && parsedResponse <= 9)
     {
         Products newProduct = new Products
         {
@@ -85,7 +85,7 @@ static void AddProduct(InventoryManager inventoryManager)
     }
 
 
-    
+
 }
 
 static void SearchProduct(InventoryManager inventoryManager)
@@ -95,7 +95,7 @@ static void SearchProduct(InventoryManager inventoryManager)
 
     var searchedName = inventoryManager.GetProducts(name);
 
-    if(searchedName != null)
+    if (searchedName != null)
     {
         Console.WriteLine($"Your product was found: {searchedName.Name}");
     }
@@ -107,7 +107,6 @@ static void SearchProduct(InventoryManager inventoryManager)
 
 
 }
-
 
 static void GetAllProduct(InventoryManager inventoryManager)
 {

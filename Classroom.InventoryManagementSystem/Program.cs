@@ -42,6 +42,9 @@ else
         case 4:
             GetAllProduct(inventoryManager);
             break;
+        case 5:
+            RecordNewSale(inventoryManager);
+            break;
         default:
             Console.WriteLine("Invalid choice. Please enter a valid option.");
             break;
@@ -115,3 +118,30 @@ static void GetAllProduct(InventoryManager inventoryManager)
         Console.WriteLine($"Product ID: {product.Id}, Name: {product.Name}, Price: {product.Price}, Stock: {product.Stock}");
     }
 }
+
+static void RecordNewSale(InventoryManager inventoryManager)
+{
+    Console.WriteLine("Enter the name of the product for the sale: ");
+    var productName = Console.ReadLine();
+
+    Console.WriteLine("Enter the quantity sold: ");
+    if (int.TryParse(Console.ReadLine(), out int quantitySold))
+    {
+        var product = inventoryManager.GetProducts(productName);
+
+        if (product != null)
+        {
+            inventoryManager.RecordSale(product, quantitySold);
+            Console.WriteLine($"Sale recorded successfully. Remaining stock for {product.Name}: {product.Stock}");
+        }
+        else
+        {
+            Console.WriteLine($"Product with name '{productName}' not found.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid quantity entered.");
+    }
+}
+

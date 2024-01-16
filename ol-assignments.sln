@@ -98,7 +98,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.AdoNetBookLibrary
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.WordAnalyzer", "Assignments.WordAnalyzer\Assignments.WordAnalyzer.csproj", "{6661B440-ACEF-47E4-9A70-CE54E808D779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.Dapper.Weekday1202", "Classroom.Dapper.Weekday1202\Classroom.Dapper.Weekday1202.csproj", "{131FBC4B-F3DD-4B03-9C03-F41BDAFE45C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.Dapper.Weekday1202", "Classroom.Dapper.Weekday1202\Classroom.Dapper.Weekday1202.csproj", "{131FBC4B-F3DD-4B03-9C03-F41BDAFE45C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.InventoryManagementSystem", "Classroom.InventoryManagementSystem\Classroom.InventoryManagementSystem.csproj", "{FB537BB0-DA3A-4F23-A4D3-89C3CE080881}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -290,6 +292,10 @@ Global
 		{131FBC4B-F3DD-4B03-9C03-F41BDAFE45C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{131FBC4B-F3DD-4B03-9C03-F41BDAFE45C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{131FBC4B-F3DD-4B03-9C03-F41BDAFE45C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB537BB0-DA3A-4F23-A4D3-89C3CE080881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB537BB0-DA3A-4F23-A4D3-89C3CE080881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB537BB0-DA3A-4F23-A4D3-89C3CE080881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB537BB0-DA3A-4F23-A4D3-89C3CE080881}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

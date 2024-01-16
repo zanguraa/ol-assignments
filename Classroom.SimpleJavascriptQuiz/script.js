@@ -41,13 +41,21 @@ function updateQuestion() {
   questionEl.textContent = questions[currentQuestion].question;
   choices.innerHTML = "";
   for (let i = 0; i < questions[currentQuestion].choices.length; i++) {
-    let li = document.createElement("li");
-    li.textContent = questions[currentQuestion].choices[i];
-    choices.appendChild(li);
+    currentQuestion++;
   }
 }
 
 updateQuestion();
+
+function answerChoices() {
+  for (let i = 0; i < questions[currentQuestion].choices.length; i++) {
+    let choice = document.createElement("button");
+    choice.textContent = questions[currentQuestion].choices[i];
+    choices.appendChild(choice);
+  }
+}
+
+answerChoices();
 
 // Function to check if the answer is correct
 function checkAnswer(event) {
@@ -64,3 +72,6 @@ function checkAnswer(event) {
 }
 
 choices.addEventListener("click", checkAnswer);
+
+
+

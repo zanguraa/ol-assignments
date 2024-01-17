@@ -31,6 +31,18 @@ namespace Classroom.InventoryManagementSystem
             }
         }
 
+        public Products GetProductById(int productId)
+        {
+            using (var connection = new SqlConnection(this.connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Products WHERE Id = @productId";
+
+                return connection.QueryFirstOrDefault<Products>(query, new { productId });
+            }
+        }
+
         public void AddProduct(Products products)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -98,6 +110,18 @@ namespace Classroom.InventoryManagementSystem
             {
                 connection.Open();
                 return connection.Query<Products>("SELECT * FROM Products").ToList();
+            }
+        }
+
+        public void DeleteProduct(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                connection.Execute("DELETE FROM Sales WHERE ProductId = @ProductId", new { ProductId = id });
+
+                connection.Execute("DELETE FROM Products WHERE Id = @ProductId", new { ProductId = id });
             }
         }
     }

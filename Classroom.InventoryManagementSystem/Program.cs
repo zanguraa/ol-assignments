@@ -37,7 +37,7 @@ else
             SearchProduct(inventoryManager);
             break;
         case 3:
-
+            DeleteProduct(inventoryManager);
             break;
         case 4:
             GetAllProduct(inventoryManager);
@@ -170,4 +170,30 @@ static void RecordNewSale(InventoryManager inventoryManager)
         Console.WriteLine("Invalid quantity entered.");
     }
 }
+
+static void DeleteProduct(InventoryManager inventory)
+{
+    Console.WriteLine("Please enter the product ID that you want to delete:");
+
+    if (int.TryParse(Console.ReadLine(), out int productIdToDelete))
+    {
+        var productToDelete = inventory.GetProductById(productIdToDelete);
+
+        if (productToDelete != null)
+        {
+            inventory.DeleteProduct(productIdToDelete);
+            Console.WriteLine("Product was deleted successfully.");
+        }
+        else
+        {
+            Console.WriteLine($"Product with ID {productIdToDelete} does not exist. Deletion failed.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please enter a valid product ID.");
+    }
+}
+
+
 

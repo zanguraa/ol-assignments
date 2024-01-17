@@ -19,7 +19,7 @@ namespace Classroom.InventoryManagementSystem
             this.connectionString = connectionString;
         }
 
-        public Products GetProducts(string name)
+        public IEnumerable<Products> GetProducts(string name)
         {
             using (var connection = new SqlConnection(this.connectionString))
             {
@@ -27,7 +27,7 @@ namespace Classroom.InventoryManagementSystem
 
                 string query = "SELECT * FROM Products WHERE Name LIKE '%' + @name + '%'";
 
-                return connection.QueryFirstOrDefault<Products>(query, new { name });
+                return connection.Query<Products>(query, new { name });
             }
         }
 

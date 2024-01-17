@@ -87,7 +87,7 @@ static void AddProduct(InventoryManager inventoryManager)
 
 static void SearchProduct(InventoryManager inventoryManager)
 {
-    Console.WriteLine("please enter product name for search: ");
+    Console.WriteLine("Please enter a product name for search: ");
     var name = Console.ReadLine();
 
     if (string.IsNullOrWhiteSpace(name))
@@ -96,14 +96,18 @@ static void SearchProduct(InventoryManager inventoryManager)
         return;
     }
 
-    var searchedName = inventoryManager.GetProducts(name);
-    if (searchedName != null)
+    var searchedProducts = inventoryManager.GetProducts(name);
+    if (searchedProducts != null && searchedProducts.Any())
     {
-        Console.WriteLine($"Your product was found: {searchedName.Name}");
+        Console.WriteLine("Your products were found:");
+        foreach (var product in searchedProducts)
+        {
+            Console.WriteLine($"Product: {product.Name}, Price: {product.Price}, Stock: {product.Stock}");
+        }
     }
     else
     {
-        Console.WriteLine($"Product with name '{name}' was not found!");
+        Console.WriteLine($"No products found with the name '{name}'.");
     }
 }
 
@@ -125,12 +129,36 @@ static void RecordNewSale(InventoryManager inventoryManager)
     Console.WriteLine("Enter the quantity sold: ");
     if (int.TryParse(Console.ReadLine(), out int quantitySold))
     {
-        var product = inventoryManager.GetProducts(productName);
+        var products = inventoryManager.GetProducts(productName).ToList();
 
-        if (product != null)
+        if (products.Any())
         {
-            inventoryManager.RecordSale(product, quantitySold);
-            Console.WriteLine($"Sale recorded successfully. Remaining stock for {product.Name}: {product.Stock}");
+            if (products.Count > 1)
+            {
+                Console.WriteLine("Multiple products found with the same name. Please choose one:");
+                for (int i = 0; i < products.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {products[i].Name}, Price: {products[i].Price}, Stock: {products[i].Stock}");
+                }
+
+                Console.Write("Enter the number corresponding to the desired product: ");
+                if (int.TryParse(Console.ReadLine(), out int selectedIndex) && selectedIndex > 0 && selectedIndex <= products.Count)
+                {
+                    var selectedProduct = products[selectedIndex - 1];
+                    inventoryManager.RecordSale(selectedProduct, quantitySold);
+                    Console.WriteLine($"Sale recorded successfully. Remaining stock for {selectedProduct.Name}: {selectedProduct.Stock}");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection. Sale not recorded.");
+                }
+            }
+            else
+            {
+                var product = products.First();
+                inventoryManager.RecordSale(product, quantitySold);
+                Console.WriteLine($"Sale recorded successfully. Remaining stock for {product.Name}: {product.Stock}");
+            }
         }
         else
         {

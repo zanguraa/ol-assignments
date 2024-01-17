@@ -83,9 +83,6 @@ static void AddProduct(InventoryManager inventoryManager)
         inventoryManager.AddProduct(newProduct);
         Console.WriteLine("Product was added successfully.");
     }
-
-
-
 }
 
 static void SearchProduct(InventoryManager inventoryManager)
@@ -93,19 +90,21 @@ static void SearchProduct(InventoryManager inventoryManager)
     Console.WriteLine("please enter product name for search: ");
     var name = Console.ReadLine();
 
-    var searchedName = inventoryManager.GetProducts(name);
+    if (string.IsNullOrWhiteSpace(name))
+    {
+        Console.WriteLine("Please enter a valid product name!");
+        return;
+    }
 
+    var searchedName = inventoryManager.GetProducts(name);
     if (searchedName != null)
     {
         Console.WriteLine($"Your product was found: {searchedName.Name}");
     }
     else
     {
-        Console.WriteLine("pleas enter some value! ");
+        Console.WriteLine($"Product with name '{name}' was not found!");
     }
-
-
-
 }
 
 static void GetAllProduct(InventoryManager inventoryManager)

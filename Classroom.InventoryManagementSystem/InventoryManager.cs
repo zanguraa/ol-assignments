@@ -124,5 +124,31 @@ namespace Classroom.InventoryManagementSystem
                 connection.Execute("DELETE FROM Products WHERE Id = @ProductId", new { ProductId = id });
             }
         }
+
+        public IEnumerable<TotalSalesReport> GetTotalSalesReport()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+            SELECT 
+                P.Id AS ProductId,
+                P.Name AS ProductName,
+                P.Price AS UnitPrice,
+                SUM(S.Quantity) AS TotalQuantitySold,
+                SUM(S.Quantity * P.Price) AS TotalRevenue
+            FROM 
+                Products P
+                LEFT JOIN Sales S ON P.Id = S.ProductId
+            GROUP BY 
+                P.Id, P.Name, P.Price
+            ORDER BY
+                TotalRevenue DESC";
+
+                return connection.Query<TotalSalesReport>(query);
+            }
+        }
+
     }
 }

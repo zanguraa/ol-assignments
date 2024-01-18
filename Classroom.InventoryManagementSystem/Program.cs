@@ -45,6 +45,9 @@ else
         case 5:
             RecordNewSale(inventoryManager);
             break;
+            case 6:
+                DisplayTotalSalesReport(inventoryManager);
+            break;
         default:
             Console.WriteLine("Invalid choice. Please enter a valid option.");
             break;
@@ -195,5 +198,19 @@ static void DeleteProduct(InventoryManager inventory)
     }
 }
 
+static void DisplayTotalSalesReport(InventoryManager inventoryManager)
+{
+    var totalSalesReport = inventoryManager.GetTotalSalesReport();
+
+    foreach (var report in totalSalesReport)
+    {
+        Console.WriteLine($"Product ID: {report.ProductId}");
+        Console.WriteLine($"Product Name: {report.ProductName}");
+        Console.WriteLine($"Unit Price: {report.UnitPrice:C}");
+        Console.WriteLine($"Total Quantity Sold: {report.TotalQuantitySold}");
+        Console.WriteLine($"Total Revenue: {report.TotalRevenue:C}");
+        Console.WriteLine();
+    }
+}
 
 

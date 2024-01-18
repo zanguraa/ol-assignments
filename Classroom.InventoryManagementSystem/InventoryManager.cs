@@ -125,7 +125,7 @@ namespace Classroom.InventoryManagementSystem
             }
         }
 
-        public IEnumerable<TotalSalesReport> GetTotalSalesReport()
+        public IEnumerable<TotalSalesReport> GetTotalSalesReportWithDetails()
         {
             using (var connection = new SqlConnection(connectionString))
             {
@@ -136,19 +136,48 @@ namespace Classroom.InventoryManagementSystem
                 P.Id AS ProductId,
                 P.Name AS ProductName,
                 P.Price AS UnitPrice,
-                SUM(S.Quantity) AS TotalQuantitySold,
-                SUM(S.Quantity * P.Price) AS TotalRevenue
+                COALESCE(SUM(S.Quantity), 0) AS TotalQuantitySold,
+                COALESCE(SUM(S.Quantity * P.Price), 0) AS TotalRevenue,
+                S.Id AS SaleId,
+                S.Quantity AS SaleQuantity,
+                S.SaleDate
+            FROM 
+                Products P
+                LEFT JOIN Sales S ON P.Id = S.ProductId
+            GROUP BY 
+                P.Id, P.Name, P.Price, S.Id, S.Quantity, S.SaleDate
+            ORDER BY
+                P.Id, S.Id";
+
+                return connection.Query<TotalSalesReport>(query);
+            }
+        }
+
+        public IEnumerable<TotalSalesPerProduct> GetTotalSalesPerProduct()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+            SELECT 
+                P.Id AS ProductId,
+                P.Name AS ProductName,
+                P.Price AS UnitPrice,
+                COALESCE(SUM(S.Quantity), 0) AS TotalQuantitySold,
+                COALESCE(SUM(S.Quantity * P.Price), 0) AS TotalRevenue
             FROM 
                 Products P
                 LEFT JOIN Sales S ON P.Id = S.ProductId
             GROUP BY 
                 P.Id, P.Name, P.Price
             ORDER BY
-                TotalRevenue DESC";
+                P.Id";
 
-                return connection.Query<TotalSalesReport>(query);
+                return connection.Query<TotalSalesPerProduct>(query);
             }
         }
+
 
     }
 }

@@ -48,6 +48,9 @@ else
             case 6:
                 DisplayTotalSalesReport(inventoryManager);
             break;
+            case 7:
+            DisplayTotalSalesPerProduct(inventoryManager); 
+            break;
         default:
             Console.WriteLine("Invalid choice. Please enter a valid option.");
             break;
@@ -200,9 +203,35 @@ static void DeleteProduct(InventoryManager inventory)
 
 static void DisplayTotalSalesReport(InventoryManager inventoryManager)
 {
-    var totalSalesReport = inventoryManager.GetTotalSalesReport();
+    var totalSalesReport = inventoryManager.GetTotalSalesReportWithDetails();
+
+    int currentProductId = 0; // To track when the product changes in the loop
 
     foreach (var report in totalSalesReport)
+    {
+        if (report.ProductId != currentProductId)
+        {
+            // Display product information when the product changes
+            Console.WriteLine($"Product ID: {report.ProductId}");
+            Console.WriteLine($"Product Name: {report.ProductName}");
+            Console.WriteLine($"Unit Price: {report.UnitPrice:C}");
+            Console.WriteLine();
+            currentProductId = report.ProductId;
+        }
+
+        // Display sale details
+        Console.WriteLine($"  Sale ID: {report.SaleId}");
+        Console.WriteLine($"  Sale Quantity: {report.SaleQuantity}");
+        Console.WriteLine($"  Sale Date: {report.SaleDate}");
+        Console.WriteLine();
+    }
+}
+
+static void DisplayTotalSalesPerProduct(InventoryManager inventoryManager)
+{
+    var totalSalesPerProduct = inventoryManager.GetTotalSalesPerProduct();
+
+    foreach (var report in totalSalesPerProduct)
     {
         Console.WriteLine($"Product ID: {report.ProductId}");
         Console.WriteLine($"Product Name: {report.ProductName}");

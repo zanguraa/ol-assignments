@@ -17,12 +17,60 @@ namespace Assignmnents.WarehouseManagementSystem
             products = new List<Product>();
         }
 
-        public static void RegistrarProducts(string name, ProductCategory category, decimal price, int quantity)
+        public void RegisterProduct(string name, ProductCategory category, decimal price, int quantity)
         {
             if (products.Any(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase)))
             {
                 Console.WriteLine("Product with the same name already exists. Please provide a unique name.");
                 return;
+            }
+
+            Product newProduct = new Product(name, category, price, quantity);
+            products.Add(newProduct);
+            Console.WriteLine("Product registered successfully.");
+        }
+
+        public void UpdateProducts(string name, decimal newPrice, int quantity)
+        {
+            Product product = products.Find(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+            if (product != null)
+            {
+                product.Price = newPrice;
+                product.Quantity = quantity;
+                products.Add(product);
+                Console.WriteLine("Product updated successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Product was not found!");
+            }
+        }
+
+        public void DeleteProducts(string name)
+        {
+            Product product = products.Find(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            
+            if(product != null)
+            {
+                products.Remove(product);
+                Console.WriteLine("Product deleted successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Product was not found!");
+            }
+        }
+
+        public void ListAllProduct()
+        {
+            Console.WriteLine("Name\t\tCategory\tPrice\tQuantity\tStatus");
+
+            foreach (Product product in products)
+            {
+                Console.WriteLine($"{product.Name}\t\t{product.Category}\t\t{product.Price:C}\t{product.Quantity}\t\t{(product.IsOutOfStock() ? "Out Of Stock" : "Available")}");
+
+
             }
         }
     }

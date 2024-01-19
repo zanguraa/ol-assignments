@@ -15,8 +15,11 @@ namespace Assignmnents.WarehouseManagementSystem
     }
     public class Product
     {
-        private string _name;
-        public string Name { get { return _name; } set
+        private string _name = "";
+        public string Name
+        {
+            get { return _name; }
+            set
             {
                 if (string.IsNullOrWhiteSpace(value) || value.Length > 50 || char.IsDigit(value[0]) || value.Trim() != value)
                 {
@@ -24,9 +27,10 @@ namespace Assignmnents.WarehouseManagementSystem
                 }
                 else
                 {
-                    _name = value;
+                    _name = value; 
                 }
-            } }
+            }
+        } 
         public ProductCategory Category { get; set; }
         private decimal _price;
         public decimal Price
@@ -63,7 +67,7 @@ namespace Assignmnents.WarehouseManagementSystem
 
         public Product(string name, ProductCategory category, decimal price, int quantity)
         {
-            Name = name;
+            Name = name; 
             Category = category;
             Price = price;
             Quantity = quantity;

@@ -38,7 +38,6 @@ namespace Assignmnents.WarehouseManagementSystem
             {
                 product.Price = newPrice;
                 product.Quantity = quantity;
-                products.Add(product);
                 Console.WriteLine("Product updated successfully!");
             }
             else
@@ -46,6 +45,7 @@ namespace Assignmnents.WarehouseManagementSystem
                 Console.WriteLine("Product was not found!");
             }
         }
+
 
         public void DeleteProducts(string name)
         {
@@ -69,8 +69,6 @@ namespace Assignmnents.WarehouseManagementSystem
             foreach (Product product in products)
             {
                 Console.WriteLine($"{product.Name}\t\t{product.Category}\t\t{product.Price:C}\t{product.Quantity}\t\t{(product.IsOutOfStock() ? "Out Of Stock" : "Available")}");
-
-
             }
         }
     }

@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-       static async Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             try
             {
@@ -14,7 +14,23 @@
 
                 Console.WriteLine($"Total matches: {matchCount}");
 
-               
+                var mostGoalScorerCountry = await MostGoalScorerCountryAsync(data);
+
+                foreach (var goalscorer in mostGoalScorerCountry)
+                {
+                    Console.WriteLine(goalscorer);
+                }
+
+                var lessGoallScorerCountry = await LessGoalScorerCountryAsync(data);
+
+                foreach (var goalscorer in lessGoallScorerCountry)
+                {
+                    Console.WriteLine(goalscorer);
+
+                }
+
+
+
             }
             catch (Exception ex)
             {
@@ -30,7 +46,7 @@
             {
                 using (StreamReader reader = new StreamReader(filePath))
                 {
-                    await reader.ReadLineAsync(); 
+                    await reader.ReadLineAsync();
 
                     while (!reader.EndOfStream)
                     {
@@ -53,7 +69,7 @@
 
                             footballObject.Add(match);
                         }
-                        
+
                     }
                 }
             }
@@ -69,6 +85,70 @@
         {
             return await Task.Run(() => data.Count);
         }
+
+        public static async Task<List<string>> MostGoalScorerCountryAsync(List<Match> data)
+        {
+            try
+            {
+                var mostGoalScorerCountry = await Task.Run(() =>
+                {
+                    var goalScorerByCountry = data
+                        .GroupBy(match => match.Country)
+                        .Select(group => new
+                        {
+                            Country = group.Key,
+                            TotalGoals = group.Sum(match => match.HomeScore + match.AwayScore)
+                        })
+                        .OrderByDescending(x => x.TotalGoals)
+                        .FirstOrDefault();
+
+                    return goalScorerByCountry != null
+                        ? new List<string> { $"{goalScorerByCountry.Country}: {goalScorerByCountry.TotalGoals} goals" }
+                        : new List<string> { "No matches available" };
+                });
+
+                return mostGoalScorerCountry;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while calculating most goal scorer country: {ex.Message}");
+                return new List<string> { "Error occurred during calculation" };
+            }
+        }
+
+        public static async Task<List<string>> LessGoalScorerCountryAsync(List<Match> data)
+        {
+            try
+            {
+                var lessGoalScorerCountry = await Task.Run(() =>
+                {
+                    var goalScorerByCountry = data
+                        .GroupBy(match => match.Country)
+                        .Select(group => new
+                        {
+                            Country = group.Key,
+                            TotalGoals = group.Sum(match => match.HomeScore + match.AwayScore)
+                        })
+                        .OrderBy(x => x.TotalGoals)
+                        .FirstOrDefault();
+
+                    return goalScorerByCountry != null
+                        ? new List<string> { $"{goalScorerByCountry.Country}: {goalScorerByCountry.TotalGoals} goals" }
+                        : new List<string> { "No matches available" };
+                });
+
+                return lessGoalScorerCountry;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while calculating less goal scorer country: {ex.Message}");
+                return new List<string> { "Error occurred during calculation" };
+            }
+        }
+
+
+
+
 
     }
 }

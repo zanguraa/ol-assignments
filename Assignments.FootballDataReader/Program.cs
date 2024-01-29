@@ -15,18 +15,30 @@
                 Console.WriteLine($"Total matches: {matchCount}");
 
                 var mostGoalScorerCountry = await MostGoalScorerCountryAsync(data);
+                Console.WriteLine("---------------------------");
 
+                Console.WriteLine("Most Goal Scorer Country:");
                 foreach (var goalscorer in mostGoalScorerCountry)
                 {
                     Console.WriteLine(goalscorer);
                 }
 
                 var lessGoallScorerCountry = await LessGoalScorerCountryAsync(data);
-
+                Console.WriteLine("---------------------------");
+                Console.WriteLine("Less Goal Scorer Country:");
                 foreach (var goalscorer in lessGoallScorerCountry)
                 {
                     Console.WriteLine(goalscorer);
 
+                }
+
+                var avgHomeGoals = await AvgHomeGoalByCountryAsync(data);
+                Console.WriteLine("---------------------------");
+
+
+                foreach (var avgGoal in avgHomeGoals)
+                {
+                    Console.WriteLine($"{avgGoal}");
                 }
 
 
@@ -53,8 +65,7 @@
                         string football = await reader.ReadLineAsync();
                         string[] values = football.Split(',');
 
-                        if (values.Length >= 9 && values[3] != "NA" && values[4] != "NA" &&
-                            int.TryParse(values[3], out int homeScore) && int.TryParse(values[4], out int awayScore))
+                        if (int.TryParse(values[3], out int homeScore) && int.TryParse(values[4], out int awayScore))
                         {
                             Match match = new Match(
                                 date: DateTime.Parse(values[0]),
@@ -146,6 +157,36 @@
             }
         }
 
+        public static async Task<List<string>> AvgHomeGoalByCountryAsync(List<Match> data)
+        {
+            try
+            {
+                var avgHomeGoalsByCountry = await Task.Run(() =>
+                {
+                    var result = data
+                        .GroupBy(match => match.Country)
+                        .Select(group => new
+                        {
+                            Country = group.Key,
+                            AvgHomeGoals = group.Average(match => match.HomeScore)
+                        })
+                        .OrderByDescending(x => x.AvgHomeGoals)
+                        .Select(x => $"{x.Country}: Avg Home Goals Scored - {x.AvgHomeGoals:F2}")
+                        .Take(10).ToList();
+
+                    return result.Any()
+                        ? result
+                        : new List<string> { "No matches available" };
+                });
+
+                return avgHomeGoalsByCountry;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred while calculating average home goals by country: {ex.Message}");
+                return new List<string> { "Error occurred during calculation" };
+            }
+        }
 
 
 

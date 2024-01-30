@@ -110,7 +110,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.CalculatorApi", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.FootballDataReader", "Assignments.FootballDataReader\Assignments.FootballDataReader.csproj", "{973FD14A-4966-4EC2-A1D6-D4C610FE7E35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.DateAndTimeApi", "Assignments.DateAndTimeApi\Assignments.DateAndTimeApi.csproj", "{AAE03CD4-F517-46B3-B658-D0FC7AB1E88F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.DateAndTimeApi", "Assignments.DateAndTimeApi\Assignments.DateAndTimeApi.csproj", "{AAE03CD4-F517-46B3-B658-D0FC7AB1E88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.TodoWithAuth", "Classroom.TodoWithAuth\Classroom.TodoWithAuth.csproj", "{9BECB055-5593-41BF-A83F-3F9F3EF40DF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -326,6 +328,10 @@ Global
 		{AAE03CD4-F517-46B3-B658-D0FC7AB1E88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAE03CD4-F517-46B3-B658-D0FC7AB1E88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAE03CD4-F517-46B3-B658-D0FC7AB1E88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BECB055-5593-41BF-A83F-3F9F3EF40DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BECB055-5593-41BF-A83F-3F9F3EF40DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BECB055-5593-41BF-A83F-3F9F3EF40DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BECB055-5593-41BF-A83F-3F9F3EF40DF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

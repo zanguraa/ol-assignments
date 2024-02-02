@@ -20,7 +20,7 @@ namespace Classroom.TodoWithAuth.Auth
             var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Sub, userId),
-            new Claim(ClaimTypes.Role, "api-user")
+            new Claim(ClaimTypes.Role, "user")
         };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtTokenSecretKey"]!));

@@ -58,7 +58,7 @@ namespace Classroom.TodoWithAuth
             {
                 options.AddPolicy("MyApiUserPolicy", policy =>
                 {
-                    policy.RequireClaim(ClaimTypes.Role, "api-user");
+                    policy.RequireClaim(ClaimTypes.Role, "user");
                 });
             });
 
@@ -70,7 +70,7 @@ namespace Classroom.TodoWithAuth
                     o.Password.RequireLowercase = true;
                     o.Password.RequireUppercase = true;
                     o.Password.RequireNonAlphanumeric = true;
-                    o.Password.RequiredLength = 128;
+                    o.Password.RequiredLength = 8;
                 })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();

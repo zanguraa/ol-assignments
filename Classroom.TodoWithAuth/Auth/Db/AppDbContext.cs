@@ -36,8 +36,8 @@ namespace Classroom.TodoWithAuth.Auth.Db
         {
             builder.Entity<RoleEntity>().HasData(new[]
             {
-            new RoleEntity { Id = 1, Name = "user" },
-            new RoleEntity { Id = 2, Name = "operator" }
+            new RoleEntity { Id = 1, Name = "user", NormalizedName = "USER" },
+            new RoleEntity { Id = 2, Name = "operator", NormalizedName = "OPERATOR" }
         });
 
             var userName = "user@domain.com";

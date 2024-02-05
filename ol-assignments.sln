@@ -114,7 +114,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.DateAndTimeApi"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TodoWithAuth", "Classroom.TodoWithAuth\Classroom.TodoWithAuth.csproj", "{9BECB055-5593-41BF-A83F-3F9F3EF40DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.Multithreading", "Assignments.Multithreading\Assignments.Multithreading.csproj", "{8C3BD92D-F87A-4BE8-81E9-1375CC72C109}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.Multithreading", "Assignments.Multithreading\Assignments.Multithreading.csproj", "{8C3BD92D-F87A-4BE8-81E9-1375CC72C109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.BookLibraryApi", "Assignments.BookLibraryApi\Assignments.BookLibraryApi.csproj", "{485775E3-F750-49E5-A3EE-03EF63A21826}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -338,6 +340,10 @@ Global
 		{8C3BD92D-F87A-4BE8-81E9-1375CC72C109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C3BD92D-F87A-4BE8-81E9-1375CC72C109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C3BD92D-F87A-4BE8-81E9-1375CC72C109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485775E3-F750-49E5-A3EE-03EF63A21826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485775E3-F750-49E5-A3EE-03EF63A21826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485775E3-F750-49E5-A3EE-03EF63A21826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485775E3-F750-49E5-A3EE-03EF63A21826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

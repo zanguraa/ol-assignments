@@ -12,4 +12,3 @@ C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\D
 C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.pdb
 C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.genruntimeconfig.cache
 C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\ref\Assignments.ConsoleCalculator.dll
-C:\Users\Zangura\source\repos\ol-assignments\Assignments.ConsoleCalculator\obj\Debug\net7.0\Assignments.ConsoleCalculator.sourcelink.json

@@ -5,7 +5,6 @@ using Classroom.Dapper.Weekday1202;
 using Dapper;
 
 
-Console.WriteLine("Hello, World!");
 string connectionString = "Data Source=DESKTOP-7OLVUTI;Initial Catalog=credo_test;Integrated Security=SSPI;TrustServerCertificate=True";
 await using SqlConnection connection = new SqlConnection(connectionString);
 await connection.OpenAsync();

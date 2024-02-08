@@ -122,6 +122,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TodoMigration.Api
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.BinaryTreeNode", "Assignments.BinaryTreeNode\Assignments.BinaryTreeNode.csproj", "{666942D6-D36B-41E4-B4F1-BDFF9C22D2B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.FoodDailyValueCalculator", "Assignments.FoodDailyValueCalculator\Assignments.FoodDailyValueCalculator.csproj", "{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -356,6 +358,10 @@ Global
 		{666942D6-D36B-41E4-B4F1-BDFF9C22D2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{666942D6-D36B-41E4-B4F1-BDFF9C22D2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{666942D6-D36B-41E4-B4F1-BDFF9C22D2B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

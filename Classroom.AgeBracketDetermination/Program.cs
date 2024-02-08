@@ -1,4 +1,6 @@
-﻿namespace Classroom.AgeBracketDetermination
+﻿using System;
+
+namespace Classroom.AgeBracketDetermination
 {
     internal class Program
     {
@@ -18,36 +20,19 @@
                 }
             }
         }
+
         static string AgeBracket(int age)
         {
-            if (age < 0)
+            return age switch
             {
-                throw new ArgumentException("Age cannot be negative.");
-            }
-            else if (age < 3)
-            {
-                return "infant";
-            }
-            else if (age < 6)
-            {
-                return "toddler";
-            }
-            else if (age < 13)
-            {
-                return "child";
-            }
-            else if (age < 18)
-            {
-                return "teenager";
-            }
-            else if (age < 65)
-            {
-                return "adult";
-            }
-            else
-            {
-                return "senior";
-            }
+                < 0 => throw new ArgumentException("Age cannot be negative."),
+                < 3 => "infant",
+                < 6 => "toddler",
+                < 13 => "child",
+                < 18 => "teenager",
+                < 65 => "adult",
+                _ => "senior"
+            };
         }
     }
 }

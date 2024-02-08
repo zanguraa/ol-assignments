@@ -17,8 +17,6 @@ namespace Assignments.BookLibraryApi.Controllers
             _dataContext = dataContext;
         }
 
-       
-
         [HttpGet("{shelfId}")]
         public IActionResult GetShelf(int shelfId)
         {
@@ -55,6 +53,20 @@ namespace Assignments.BookLibraryApi.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, "An error occurred while creating the shelf.");
+            }
+        }
+
+        [HttpDelete("{shelfId}")]
+        public IActionResult DeleteShelf(int shelfId)
+        {
+            try
+            {
+                _dataContext.RemoveShelf(shelfId);
+                return Ok("Shelf deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while deleting the shelf.");
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using Assignments.BookLibraryApi.Models;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
@@ -43,6 +44,17 @@ namespace Assignments.BookLibraryApi.DataContextDapper
 
             db.Execute(createShelfTableQuery);
             db.Execute(createBookTableQuery);
+        }
+
+        public void AddBook(Book book)
+        {
+            using (IDbConnection db = GetConnection())
+            {
+                string query = @"
+                    INSERT INTO Book (ShelfId, Title, ISBN, Description)
+                    VALUES (@ShelfId, @Title, @ISBN, @Description);";
+                db.Execute(query, book);
+            }
         }
     }
 }

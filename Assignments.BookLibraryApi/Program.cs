@@ -19,6 +19,11 @@ namespace Assignments.BookLibraryApi
             var dataContext = new DataContext(connectionString);
             dataContext.EnsureTablesCreated();
 
+            builder.Services.AddSingleton<DataContext>(dataContext); // Register DataContext as a singleton
+
+            // Add other services...
+
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

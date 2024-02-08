@@ -35,6 +35,28 @@ namespace Assignments.BookLibraryApi.Controllers
         }
 
 
+        [HttpPost("create")]
+        public IActionResult CreateShelf([FromBody] CreateShelfRequest request)
+        {
+            if (request == null || string.IsNullOrWhiteSpace(request.Name))
+            {
+                return BadRequest("Shelf name is required.");
+            }
+
+            try
+            {
+                Shelf newShelf = new Shelf
+                {
+                    Name = request.Name
+                };
+                _dataContext.AddShelf(newShelf); 
+                return Ok("Shelf created successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while creating the shelf.");
+            }
+        }
 
     }
 }

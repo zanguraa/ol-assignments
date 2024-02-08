@@ -82,6 +82,15 @@ namespace Assignments.BookLibraryApi.DataContextDapper
             db.Execute(createShelfTableQuery);
             db.Execute(createBookTableQuery);
         }
+
+        public void AddShelf(Shelf shelf)
+        {
+            using (IDbConnection db = GetConnection())
+            {
+                string query = "INSERT INTO Shelf (Name) VALUES (@Name);";
+                db.Execute(query, shelf);
+            }
+        }
     }
 }
 

@@ -18,6 +18,25 @@ namespace Assignments.BookLibraryApi.Controllers
             _dataContext = dataContext;
         }
 
+        [HttpPost("add")]
+        public IActionResult AddBook([FromBody] Book book)
+        {
+            if (book == null || string.IsNullOrWhiteSpace(book.Title) || string.IsNullOrWhiteSpace(book.ISBN))
+            {
+                return BadRequest("Invalid book data. Title and ISBN are required.");
+            }
+
+            try
+            {
+                _dataContext.AddBook(book);
+                return Ok("Book added successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while adding the book.");
+            }
+        }
+
         [HttpPost("{shelfId}/AddToShelf")]
         public IActionResult AddToShelf(int shelfId, [FromBody] AddToShelfRequest request)
         {

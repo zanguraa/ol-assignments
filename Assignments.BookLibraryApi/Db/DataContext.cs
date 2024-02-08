@@ -100,6 +100,15 @@ namespace Assignments.BookLibraryApi.DataContextDapper
                 db.Execute(query, new { ShelfId = shelfId });
             }
         }
+
+        public void RenameShelf(int shelfId, string newName)
+        {
+            using (IDbConnection db = GetConnection())
+            {
+                string query = "UPDATE Shelf SET Name = @NewName WHERE Id = @ShelfId;";
+                db.Execute(query, new { ShelfId = shelfId, NewName = newName });
+            }
+        }
     }
 }
 

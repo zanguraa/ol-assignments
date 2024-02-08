@@ -70,5 +70,24 @@ namespace Assignments.BookLibraryApi.Controllers
             }
         }
 
+        [HttpPut("{shelfId}")]
+        public IActionResult UpdateShelf(int shelfId, [FromBody] RenameShelfRequest request)
+        {
+            if (request == null || string.IsNullOrWhiteSpace(request.Name))
+            {
+                return BadRequest("Shelf name is required.");
+            }
+
+            try
+            {
+                _dataContext.RenameShelf(shelfId, request.Name);
+                return Ok("Shelf updated successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while updating the shelf.");
+            }
+        }
+
     }
 }

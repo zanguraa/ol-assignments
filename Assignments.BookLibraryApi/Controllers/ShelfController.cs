@@ -24,7 +24,7 @@ namespace Assignments.BookLibraryApi.Controllers
         {
             try
             {
-                var books = _dataContext.GetBook(shelfId);
+                var books = _dataContext.GetBooksByShelfId(shelfId);
                 return Ok(books);
             }
             catch (Exception ex)

@@ -109,6 +109,15 @@ namespace Assignments.BookLibraryApi.DataContextDapper
                 db.Execute(query, new { ShelfId = shelfId, NewName = newName });
             }
         }
+
+        public void RemoveBookFromShelf(int bookId)
+        {
+            using (IDbConnection db = GetConnection())
+            {
+                string query = "DELETE FROM Book WHERE Id = @BookId;";
+                db.Execute(query, new { BookId = bookId });
+            }
+        }
     }
 }
 

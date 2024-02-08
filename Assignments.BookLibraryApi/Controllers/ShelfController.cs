@@ -47,7 +47,7 @@ namespace Assignments.BookLibraryApi.Controllers
                 {
                     Name = request.Name
                 };
-                _dataContext.AddShelf(newShelf); 
+                _dataContext.AddShelf(newShelf);
                 return Ok("Shelf created successfully.");
             }
             catch (Exception ex)
@@ -86,6 +86,28 @@ namespace Assignments.BookLibraryApi.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, "An error occurred while updating the shelf.");
+            }
+        }
+
+        [HttpDelete("book/{bookId}")]
+        public IActionResult RemoveBookFromShelf(int bookId)
+        {
+            try
+            {
+                var book = _dataContext.GetBookById(bookId);
+                if (book == null)
+                {
+                    return NotFound("Book not found.");
+                }
+
+                _dataContext.RemoveBookFromShelf(bookId);
+
+                return Ok("Book removed from the shelf successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error removing book from shelf: {ex.Message}");
+                return StatusCode(500, "An error occurred while removing the book from the shelf.");
             }
         }
 

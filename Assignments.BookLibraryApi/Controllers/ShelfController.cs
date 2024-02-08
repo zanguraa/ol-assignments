@@ -61,6 +61,14 @@ namespace Assignments.BookLibraryApi.Controllers
         {
             try
             {
+                // Check if the shelf contains any books
+                var books = _dataContext.GetBooksByShelfId(shelfId);
+                if (books.Any())
+                {
+                    return BadRequest("Cannot delete shelf because it contains books.");
+                }
+
+                // If the shelf is empty, delete it
                 _dataContext.RemoveShelf(shelfId);
                 return Ok("Shelf deleted successfully.");
             }
@@ -68,7 +76,7 @@ namespace Assignments.BookLibraryApi.Controllers
             {
                 return StatusCode(500, "An error occurred while deleting the shelf.");
             }
-        }
+        } 
 
         [HttpPut("{shelfId}")]
         public IActionResult UpdateShelf(int shelfId, [FromBody] RenameShelfRequest request)

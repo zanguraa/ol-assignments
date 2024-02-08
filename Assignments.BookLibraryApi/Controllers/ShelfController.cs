@@ -17,41 +17,20 @@ namespace Assignments.BookLibraryApi.Controllers
             _dataContext = dataContext;
         }
 
-        [HttpPost("s{helfId}")]
-        public IActionResult AddToShelf(int shelfId, [FromBody] AddToShelfRequest request)
+       
+
+        [HttpGet("{shelfId}")]
+        public IActionResult GetShelf(int shelfId)
         {
-            // Validate request
-            if (request == null)
-            {
-                return BadRequest("Request body cannot be empty.");
-            }
-
-            if (string.IsNullOrWhiteSpace(request.Title) || string.IsNullOrWhiteSpace(request.ISBN))
-            {
-                return BadRequest("Title and ISBN are required.");
-            }
-
             try
             {
-                // Create a new Book object based on the request
-                var bookToAdd = new Book
-                {
-                    ShelfId = shelfId,
-                    Title = request.Title,
-                    ISBN = request.ISBN,
-                    Description = request.Description
-                };
-
-                // Add the book to the database
-                _dataContext.AddBook(bookToAdd);
-
-                return Ok("Book added to shelf successfully.");
+                var books = _dataContext.GetBook(shelfId);
+                return Ok(books);
             }
             catch (Exception ex)
             {
-                // Log the error
-                Console.WriteLine($"Error adding book to shelf: {ex.Message}");
-                return StatusCode(500, "An error occurred while adding the book to the shelf.");
+                Console.WriteLine($"Error getting shelf: {ex.Message}");
+                return StatusCode(500, "An error occurred while getting the shelf.");
             }
         }
 

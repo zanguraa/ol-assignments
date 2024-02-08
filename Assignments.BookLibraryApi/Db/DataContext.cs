@@ -56,5 +56,15 @@ namespace Assignments.BookLibraryApi.DataContextDapper
                 db.Execute(query, book);
             }
         }
+
+        private void GetBook(int shelfId)
+        {
+            using (IDbConnection db = GetConnection())
+            {
+                string query = "SELECT * FROM Book WHERE ShelfId = @ShelfId;";
+                db.Query<Book>(query, new { ShelfId = shelfId });
+            }
+        }
+        }
     }
 }

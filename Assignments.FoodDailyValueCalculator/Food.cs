@@ -1,34 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assignments.FoodDailyValueCalculator;
 
-namespace Assignments.FoodDailyValueCalculator
+internal class Food : BaseNutritionalPairs
 {
-    public class Food
+    public Food(double cal, double fat, double protein, double carbohydrates, double fiber, double sugar, double vitamin_c, double calcium, double iron)
     {
-        public double Calories { get; }
-        public double Fat { get; }
-        public double Protein { get; }
-        public double Carbohydrates { get; }
-        public double Fiber { get; }
-        public double Sugar { get; }
-        public double VitaminC { get; }
-        public double Calcium { get; }
-        public double Iron { get; }
-
-        public Food(double calories, double fat, double protein, double carbohydrates, double fiber, double sugar, double vitaminC, double calcium, double iron)
-        {
-            Calories = calories;
-            Fat = fat;
-            Protein = protein;
-            Carbohydrates = carbohydrates;
-            Fiber = fiber;
-            Sugar = sugar;
-            VitaminC = vitaminC;
-            Calcium = calcium;
-            Iron = iron;
-        }
+        Calories = cal; Fat = fat; Protein = protein; Carbohydrates = carbohydrates;
+        Fiber = fiber; Sugar = sugar; VitaminC = vitamin_c; Calcium = calcium;
+        Iron = iron;
     }
 }

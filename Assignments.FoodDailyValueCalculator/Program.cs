@@ -1,12 +1,13 @@
 ﻿using System;
 
+
 namespace Assignments.FoodDailyValueCalculator
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var calculator = new FoodDailyValueCalculator();
+            var calculator = new FoodDailyValueCalculatorr();
             var apple = new Apple();
             var dailyValue = calculator.Calculate(apple, 2400);
 

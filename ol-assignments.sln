@@ -120,11 +120,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.BookLibraryApi"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classroom.TodoMigration.Api", "Classroom.TodoMigration.Api\Classroom.TodoMigration.Api.csproj", "{5E40FA70-20A8-451C-ABAD-7B76B2ACA240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.BinaryTreeNode", "Assignments.BinaryTreeNode\Assignments.BinaryTreeNode.csproj", "{666942D6-D36B-41E4-B4F1-BDFF9C22D2B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.BinaryTreeNode", "Assignments.BinaryTreeNode\Assignments.BinaryTreeNode.csproj", "{666942D6-D36B-41E4-B4F1-BDFF9C22D2B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.FoodDailyValueCalculator", "Assignments.FoodDailyValueCalculator\Assignments.FoodDailyValueCalculator.csproj", "{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.FoodDailyValueCalculator", "Assignments.FoodDailyValueCalculator\Assignments.FoodDailyValueCalculator.csproj", "{37EACB3C-8DB6-4EAB-B9E5-9F5E13EE82EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments.RssFeedAggregator", "Assignments.RssFeedAggregator\Assignments.RssFeedAggregator.csproj", "{1A0BD4AA-1236-49A5-AFE7-CAC1CD9A715E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignments.RssFeedAggregator", "Assignments.RssFeedAggregator\Assignments.RssFeedAggregator.csproj", "{1A0BD4AA-1236-49A5-AFE7-CAC1CD9A715E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classroom.AsyncWebScraper", "Classroom.AsyncWebScraper\Classroom.AsyncWebScraper.csproj", "{085826AA-DB32-4212-B965-66EFEC32AA87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -368,6 +370,10 @@ Global
 		{1A0BD4AA-1236-49A5-AFE7-CAC1CD9A715E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A0BD4AA-1236-49A5-AFE7-CAC1CD9A715E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A0BD4AA-1236-49A5-AFE7-CAC1CD9A715E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{085826AA-DB32-4212-B965-66EFEC32AA87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085826AA-DB32-4212-B965-66EFEC32AA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085826AA-DB32-4212-B965-66EFEC32AA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085826AA-DB32-4212-B965-66EFEC32AA87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

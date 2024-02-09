@@ -10,30 +10,45 @@ namespace AsyncWebScraper
         static async Task Main(string[] args)
         {
             Console.WriteLine("Welcome to Async Web Scraper!");
-            Console.WriteLine("Enter the list of URLs you want to scrape (one URL per line). Type 'done' to finish:");
 
-            // Collect URLs from user input
-            List<string> urls = new List<string>();
-            string url;
-            while ((url = Console.ReadLine()) != "done")
+            do
             {
-                urls.Add(url);
-            }
+                Console.WriteLine("Enter URLs to scrape (separated by a comma):");
+                string input = Console.ReadLine();
 
-            // Fetch data from URLs asynchronously
-            await ScrapeUrlsAsync(urls);
+                List<string> urls = ParseUrls(input);
+
+                await ScrapeUrlsAsync(urls);
+
+                Console.WriteLine("\nWould you like to scrape more URLs? (yes/no):");
+            } while (Console.ReadLine().Trim().ToLower() == "yes");
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
 
+        static List<string> ParseUrls(string input)
+        {
+            List<string> urls = new List<string>();
+
+            string[] urlArray = input.Split(',');
+            foreach (string url in urlArray)
+            {
+                urls.Add(url.Trim());
+            }
+
+            return urls;
+        }
+
         static async Task ScrapeUrlsAsync(List<string> urls)
         {
+            int successfulCount = 0;
+
             using (HttpClient httpClient = new HttpClient())
             {
                 foreach (string url in urls)
                 {
-                    Console.WriteLine($"Fetching {url}...");
+                    Console.WriteLine($"\nFetching data from {url}...");
 
                     try
                     {
@@ -41,25 +56,26 @@ namespace AsyncWebScraper
 
                         if (response.IsSuccessStatusCode)
                         {
-                            string content = await response.Content.ReadAsStringAsync();
-                            // Display or process the scraped data as needed
-                            Console.WriteLine($"Scraped data from {url}: {content.Length} characters");
+                            Console.WriteLine($"{url} - Data fetched successfully.");
+                            successfulCount++;
                         }
                         else
                         {
-                            Console.WriteLine($"Failed to fetch data from {url}. Status code: {response.StatusCode}");
+                            Console.WriteLine($"{url} - Error: {response.StatusCode}");
                         }
                     }
                     catch (HttpRequestException ex)
                     {
-                        Console.WriteLine($"Error fetching data from {url}: {ex.Message}");
+                        Console.WriteLine($"{url} - Error: {ex.Message}");
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"An unexpected error occurred while fetching data from {url}: {ex.Message}");
+                        Console.WriteLine($"{url} - An unexpected error occurred: {ex.Message}");
                     }
                 }
             }
+
+            Console.WriteLine($"\nProcessed {successfulCount} out of {urls.Count} URLs successfully.");
         }
     }
 }
